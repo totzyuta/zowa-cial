@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'dashboard/movie'
+  get 'dashboard/video'
   get 'dashboard/account'
   get 'dashboard/follower'
   get 'dashboard/stats'

@@ -1,0 +1,82 @@
+@import 'mixin.scss';
+
+
+.video__main {
+    overflow: scroll;
+}
+.video__main__top {
+    @include position(relative, $left: 10%, $top: 68px);
+    font-size: 20px;
+    width: 30%;
+}
+.video__main__sort {
+    display: inline-block;
+    margin-top: 20px;
+}
+.video__main__sort__select{
+    color: white;
+}
+
+
+.video__main__stock--empty {
+    font-size: 20px;
+    margin-top: 55px;
+}
+.video__main__stock__upload {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+.video__main__stock__upload__button{
+    color: white;
+    background-color: inherit;
+    padding: 8px 20px;
+    border-radius: 2px;
+    font-size: 16px;
+    height: 92px;
+    width: 600px;
+    margin-top: 50px;
+    font-weight: bold;
+    #file{
+        font-size: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+}
+
+// styling for tabs
+.video__main__tabs {
+    width: 70%;
+    float: left;
+    height: 100%;
+}
+.video__main__tab__item {
+    @include position(relative, $left: 70%, $bottom: 23px);
+    padding: 10px;
+}
+.video__tab__item:hover {
+opacity: 0.75;
+}
+input[name="video__main__tab__item"] {
+display: none;
+}
+
+.video__main__tab__content {
+display: none;
+text-align: center;
+padding: 40px 0 0 80px;
+width: 100%;
+}
+
+#video__main__stock:checked ~ #video__main__stock__content,
+#video__main__list:checked ~ #video__main__list__content,
+#video__main__paid:checked ~ #video__main__paid__content {
+display: block;
+}
+
+.video__main__tabs input:checked + .video__main__tab__item {
+background-color: rgba(250, 251, 255, 0.2);
+}
+    

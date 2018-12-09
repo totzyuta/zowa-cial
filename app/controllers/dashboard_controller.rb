@@ -1,5 +1,8 @@
 class DashboardController < ApplicationController
-  def movie
+  def video
+    @user = Hash.new
+    @user[:name] = 'Yuta'
+
   end
 
   def account

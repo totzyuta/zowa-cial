@@ -1,0 +1,17 @@
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null){
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin vertical-center{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+@mixin vertical-center-for-one-line($height){
+    height: $height;
+    line-height: $height;
+}
