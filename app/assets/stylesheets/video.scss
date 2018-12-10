@@ -23,8 +23,7 @@
     margin-top: 55px;
 }
 .video__main__stock__upload {
-    position: relative;
-    overflow: hidden;
+    @include position(relative, $right: 20%);
     display: inline-block;
 }
 .video__main__stock__upload__button{
@@ -34,7 +33,7 @@
     border-radius: 2px;
     font-size: 16px;
     height: 92px;
-    width: 600px;
+    width: 200%;
     margin-top: 50px;
     font-weight: bold;
     #file{
@@ -66,7 +65,7 @@ display: none;
 .video__main__tab__content {
 display: none;
 text-align: center;
-padding: 40px 0 0 80px;
+padding: 40px 0 0 10%;
 width: 100%;
 }
 
