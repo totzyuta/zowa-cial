@@ -45,6 +45,13 @@
     }
 }
 
+//2nd tab
+
+.video__list {
+    display: grid;
+    grid-template-columns: 30% 70% 30%;
+}
+
 // styling for tabs
 .video__main__tabs {
     width: 70%;
@@ -70,7 +77,7 @@ width: 100%;
 }
 
 #video__main__stock:checked ~ #video__main__stock__content,
-#video__main__list:checked ~ #video__main__list__content,
+#video__main__published:checked ~ #video__main__published__content,
 #video__main__paid:checked ~ #video__main__paid__content {
 display: block;
 }
