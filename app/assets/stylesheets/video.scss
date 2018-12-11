@@ -3,6 +3,7 @@
 
 .video__main {
     overflow: scroll;
+    height: 100%;
 }
 .video__main__top {
     @include position(relative, $left: 10%, $top: 68px);
@@ -23,18 +24,17 @@
     margin-top: 55px;
 }
 .video__main__stock__upload {
-    @include position(relative, $right: 20%);
+    position: relative;
     display: inline-block;
+    overflow: hidden;
 }
 .video__main__stock__upload__button{
     color: white;
     background-color: inherit;
-    padding: 8px 20px;
-    border-radius: 2px;
     font-size: 16px;
     height: 92px;
-    width: 200%;
-    margin-top: 50px;
+    width: 592px;
+    margin-top: 40px;
     font-weight: bold;
     #file{
         font-size: 100px;
@@ -75,7 +75,7 @@
     height: 100%;
 }
 .video__main__tab__item {
-    @include position(relative, $left: 70%, $bottom: 23px);
+    @include position(relative, $left: 80%, $bottom: 23px);
     padding: 10px;
 }
 .video__tab__item:hover {
@@ -89,7 +89,7 @@ display: none;
 display: none;
 text-align: center;
 padding: 40px 0 0 10%;
-width: 100%;
+width: 120%;
 }
 
 #video__main__stock:checked ~ #video__main__stock__content,
