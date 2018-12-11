@@ -35,11 +35,11 @@
     font-weight: bold;
     }
 
-//2nd tab
+//2nd and 3rd tab
 
 .video__list {
     display: grid;
-    grid-template-columns: 1fr 7fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-gap: 16px;
     height: 130px;
     margin: 40px 0;
@@ -57,15 +57,16 @@
 .video__info__date {
     align-self: end;
 }
+.big-placeholder {
+    height: 780px;
+}
 
-// styling for tabs
+styling for tabs
 .video__main__tabs {
-    width: 70%;
     float: left;
-    height: 100%;
 }
 .video__main__tab__item {
-    @include position(relative, $left: 80%, $bottom: 23px);
+    @include position(relative, $left: 70%, $bottom: 23px);
     padding: 10px;
 }
 .video__tab__item:hover {
@@ -79,7 +80,6 @@ display: none;
 display: none;
 text-align: center;
 padding: 40px 0 0 10%;
-width: 120%;
 }
 
 #video__main__stock:checked ~ #video__main__stock__content,

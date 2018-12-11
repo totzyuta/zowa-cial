@@ -1,12 +1,10 @@
 @import 'mixin.scss';
 
 .account__edit {
-    width: 77%;
-    float: left;
     display: grid;
     grid-gap: 40px;
     justify-items: center;
-    overflow: scroll;
+    grid-area: 2/2/3/3;
 }
 .account__edit__imgs {
     position: relative;
