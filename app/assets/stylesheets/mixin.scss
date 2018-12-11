@@ -15,3 +15,27 @@
     height: $height;
     line-height: $height;
 }
+
+@mixin input-button($height,$width){
+    height: $height;
+    width: $width;
+    color: white;
+    background-color: inherit;
+    font-size: 16px;
+    position: relative;
+    input{
+        position: absolute;
+        left: 0;
+        width: inherit;
+        top: 0;
+        height: inherit;
+        opacity: 0;
+    }
+}
+@mixin input-form($height){
+    height: $height;
+    width: 612px;
+    background: rgba(250, 251, 255, 0.1);
+    color: white;
+    opacity: 0.6;
+}

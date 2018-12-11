@@ -8,6 +8,9 @@ class DashboardController < ApplicationController
   def account
   end
 
+  def account_edit
+  end
+
   def follower
   end
 
