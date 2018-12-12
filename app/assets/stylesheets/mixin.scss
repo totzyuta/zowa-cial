@@ -38,4 +38,9 @@
     background: rgba(250, 251, 255, 0.1);
     color: white;
     opacity: 0.6;
+    font-size: 16px;
+    &::placeholder{
+        font-size: 16px;
+        color: white;
+    }
 }

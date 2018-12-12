@@ -42,7 +42,7 @@
     grid-template-columns: 1fr 2fr 1fr;
     grid-gap: 16px;
     height: 130px;
-    margin: 40px 0;
+    margin: 40px 0 40px 10%;
 }
 .video__info {
     display: grid;
@@ -79,7 +79,6 @@ display: none;
 .video__main__tab__content {
 display: none;
 text-align: center;
-padding: 40px 0 0 10%;
 }
 
 #video__main__stock:checked ~ #video__main__stock__content,
