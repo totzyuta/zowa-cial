@@ -29,3 +29,21 @@
     @include sort;
 }
 // list
+.follower-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.follower-list__date {
+    justify-self: end;
+}
+.user-icon {
+    height: 24px;
+    width: 17px;
+}
+.follower-list__user-name{
+    position: relative;
+    bottom: 6px;
+}
+.follower-list__main, .follower-list__date{
+    @include vertical-center-for-one-line(24px);
+}
