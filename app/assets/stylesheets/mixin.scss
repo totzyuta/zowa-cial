@@ -44,3 +44,9 @@
         color: white;
     }
 }
+@mixin sort{
+    color: white;
+    background: none;
+    border: none;
+    -webkit-appearance: none;
+}

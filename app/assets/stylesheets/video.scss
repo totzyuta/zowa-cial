@@ -15,7 +15,7 @@
     margin-top: 20px;
 }
 .video__main__sort__select{
-    color: white;
+    @include sort;
 }
 
 

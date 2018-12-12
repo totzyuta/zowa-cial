@@ -1,0 +1,31 @@
+@import 'mixin.scss';
+
+.follower {
+    width: 612px;
+    margin: 80px auto;
+}
+// search
+.follower-search {
+    position: relative;
+}
+.follower-search__input {
+    height: 40px;
+    width: 612px;
+    position: relative;
+}
+.follower-search__button {
+    width: 65px;
+    height: 45px;
+    background: yellow;
+    position: absolute;
+    top: 0;
+    right: -6px;
+}
+// sort
+.follower-sort {
+    margin: 32px 0;
+}
+.follower-sort__select{
+    @include sort;
+}
+// list
