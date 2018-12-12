@@ -6,6 +6,46 @@
     justify-items: center;
     grid-area: 2/2/3/3;
 }
+
+.account__top {
+    width: 100%;
+    background: url("water-1330252_1280.jpg");
+}
+.account__top__info {
+    width: 612px;
+    height: 244px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 95px auto 128px;
+}
+.account__top__info__left {
+    position: relative;
+    top: 18%;
+    height: fit-content;
+}
+.account__top__info__middle {
+    position: relative;
+    top: 39%;
+    height: fit-content;
+}
+.account__top__info__middle p {
+    margin: 6px;
+}
+.account__top__info__tags span {
+    border: 1px solid white;
+    border-radius: 14px;
+    margin: 0 4px;
+}
+.account__top__info__right {
+    position: relative;
+    top: 75%;
+    height: fit-content;
+}
+.account__top__edit {
+    border: solid 1px white;
+    padding: 12px 31px;
+}
+
 .account__edit__imgs {
     position: relative;
     display: grid;
