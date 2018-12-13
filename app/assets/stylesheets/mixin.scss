@@ -50,3 +50,10 @@
     border: none;
     -webkit-appearance: none;
 }
+@mixin uploadform-bg {
+    width: 94px;
+    height: 93px;
+    background-color: rgba(250, 251, 255, 0.2);
+    border-radius: 90%;
+    margin: auto;
+}

@@ -1,0 +1,35 @@
+@import 'mixin.scss';
+
+.stats {
+    height: 1000px;
+    width: 612px;
+    margin: 80px auto;
+}
+
+
+
+// styling for tabs
+
+
+.stats__tab__item:hover {
+opacity: 0.75;
+}
+input[name="stats__tab__item"] {
+display: none;
+}
+
+.stats__tab__content {
+display: none;
+text-align: center;
+}
+
+#stats-volume:checked ~ #stats-volume__content,
+#stats-rank:checked ~ #stats-rank__content,
+#stats-contribution:checked ~ #stats-contribution__content {
+display: block;
+}
+
+.stats__tabs input:checked + .stats__tab__item {
+background-color: rgba(250, 251, 255, 0.2);
+}
+    

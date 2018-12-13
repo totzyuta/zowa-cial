@@ -1,2 +1,40 @@
-<h1>Dashboard#stats</h1>
-<p>Find me in app/views/dashboard/stats.html.erb</p>
+<div class="stats">
+    <p class="stats-title">タグの統計</p>
+    <div class="stats__tabs">
+        <span class="stats__tab__title">カテゴリ</span>
+        <input id="stats-volume" type="radio" name="stats__tab__item" checked>
+        <label for="stats-volume" class="stats__tab__item">動画数</label>
+        <input id="stats-rank" type="radio" name="stats__tab__item">
+        <label for="stats-rank" class="stats__tab__item">ランキング100位以内</label>
+        <input id="stats-contribution" type="radio" name="stats__tab__item">
+        <label for="stats-contribution" class="stats__tab__item">再生数寄与度</label>
+        
+        <div class="stats__tab__content" id="stats-volume__content">
+            <div class="stats-category">
+                <p class="stats-category__name">ささやき</p>
+                <span class="stats-category__bar"></span>
+            </div>
+            <div class="stats-volume__value">100</div>
+            <div class="stats-rank__value">20%</div>
+            <div class="stats-contribution__value"></div>
+        </div>
+        <div class="stats__tab__content" id="stats-rank__content">
+            <div class="stats-category">
+                <p class="stats-category__name">ささやき</p>
+                <span class="stats-category__bar"></span>
+            </div>
+            <div class="stats-volume__value">100</div>
+            <div class="stats-rank__value">20%</div>
+            <div class="stats-contribution__value"></div>
+        </div>
+        <div class="stats__tab__content" id="stats-contribution__content">
+            <div class="stats-category">
+                <p class="stats-category__name">ささやき</p>
+                <span class="stats-category__bar"></span>
+            </div>
+            <div class="stats-volume__value">100</div>
+            <div class="stats-rank__value">20%</div>
+            <div class="stats-contribution__value"></div>
+        </div>
+    </div>
+</div>

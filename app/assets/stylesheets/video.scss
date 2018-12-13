@@ -61,10 +61,7 @@
     height: 780px;
 }
 
-styling for tabs
-.video__main__tabs {
-    float: left;
-}
+// styling for tabs
 .video__main__tab__item {
     @include position(relative, $left: 70%, $bottom: 23px);
     padding: 10px;
