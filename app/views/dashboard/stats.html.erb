@@ -1,40 +1,37 @@
 <div class="stats">
-    <p class="stats-title">タグの統計</p>
-    <div class="stats__tabs">
-        <span class="stats__tab__title">カテゴリ</span>
-        <input id="stats-volume" type="radio" name="stats__tab__item" checked>
-        <label for="stats-volume" class="stats__tab__item">動画数</label>
-        <input id="stats-rank" type="radio" name="stats__tab__item">
-        <label for="stats-rank" class="stats__tab__item">ランキング100位以内</label>
-        <input id="stats-contribution" type="radio" name="stats__tab__item">
-        <label for="stats-contribution" class="stats__tab__item">再生数寄与度</label>
-        
-        <div class="stats__tab__content" id="stats-volume__content">
-            <div class="stats-category">
-                <p class="stats-category__name">ささやき</p>
-                <span class="stats-category__bar"></span>
-            </div>
-            <div class="stats-volume__value">100</div>
-            <div class="stats-rank__value">20%</div>
-            <div class="stats-contribution__value"></div>
-        </div>
-        <div class="stats__tab__content" id="stats-rank__content">
-            <div class="stats-category">
-                <p class="stats-category__name">ささやき</p>
-                <span class="stats-category__bar"></span>
-            </div>
-            <div class="stats-volume__value">100</div>
-            <div class="stats-rank__value">20%</div>
-            <div class="stats-contribution__value"></div>
-        </div>
-        <div class="stats__tab__content" id="stats-contribution__content">
-            <div class="stats-category">
-                <p class="stats-category__name">ささやき</p>
-                <span class="stats-category__bar"></span>
-            </div>
-            <div class="stats-volume__value">100</div>
-            <div class="stats-rank__value">20%</div>
-            <div class="stats-contribution__value"></div>
-        </div>
+    <p class="stats-title">タグ別の統計</p>
+    <div class="stats-list stats-list__title">
+        <p class="stats-list__category">カテゴリ</p>
+        <p class="stats-list__volume">動画数</p>
+        <p class="stats-list__rank">ランキング100位以内率</p>
+        <p class="stats-list__contribution">再生数寄与度</p>
     </div>
+    <div class="stats-list">
+        <div class="stats-list__category">
+            <dt class="stats-list__category__name">ささやき</dt>
+            <dd class="stats-bar stats-bar-100"></dd>
+        </div>
+        <p class="stats-list__volume">100</p>
+        <p class="stats-list__rank">20%</p>
+        <p class="stats-list__contribution">30%</p>
+    </div>
+    <div class="stats-list">
+        <div class="stats-list__category">
+            <dt class="stats-list__category__name">耳かき</dt>
+            <dd class="stats-bar stats-bar-90"></dd>
+        </div>
+        <p class="stats-list__volume">90</p>
+        <p class="stats-list__rank">35%</p>
+        <p class="stats-list__contribution">15%</p>
+    </div>
+    <div class="stats-list">
+        <div class="stats-list__category">
+            <dt class="stats-list__category__name">ロールプレイ</dt>
+            <dd class="stats-bar stats-bar-80"></dd>
+        </div>
+        <p class="stats-list__volume">80</p>
+        <p class="stats-list__rank">7.5%</p>
+        <p class="stats-list__contribution">7.5%</p>
+    </div>
+
 </div>

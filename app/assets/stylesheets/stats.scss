@@ -6,30 +6,35 @@
     margin: 80px auto;
 }
 
-
-
-// styling for tabs
-
-
-.stats__tab__item:hover {
-opacity: 0.75;
+.stats-list__title{
+    font-size: 12px
 }
-input[name="stats__tab__item"] {
-display: none;
+.stats-list {
+    display: grid;
+    grid-template-columns: 230px auto 148px 128px;
+    grid-gap: 20px;
 }
-
-.stats__tab__content {
-display: none;
-text-align: center;
+.stats-bar{
+    width: 100%;
+    height: 50%;
+    margin-left: 0;
+    &:after {
+      content: "";
+      display: block;
+      background-color: #ab9d09;
+      border: 1px solid #f8e71c;
+      height: 50%;
+      position: relative;
+    }
 }
-
-#stats-volume:checked ~ #stats-volume__content,
-#stats-rank:checked ~ #stats-rank__content,
-#stats-contribution:checked ~ #stats-contribution__content {
-display: block;
+@for $i from 1 through 100 {
+  .stats-bar-#{$i} {
+    &:after {
+      $value: ($i * 1%);
+      width: $value;
+    }
+  }
 }
-
-.stats__tabs input:checked + .stats__tab__item {
-background-color: rgba(250, 251, 255, 0.2);
+.stats-list__rank, .stats-list__contribution {
+    justify-self: end;
 }
-    
