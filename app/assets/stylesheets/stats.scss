@@ -27,8 +27,34 @@
       position: relative;
     }
 }
+.stats-bar--vol{
+    @include stats(#369682,#50e3c2);
+}
+.stats-bar--rank{
+    @include stats(#ab9d09,#f8e71c);
+}
+.stats-bar--contribution{
+    @include stats(#3a8fba,#66ccff);
+}
+
 @for $i from 1 through 100 {
-  .stats-bar-#{$i} {
+  .stats-bar--vol-#{$i} {
+    &:after {
+      $value: ($i * 1%);
+      width: $value;
+    }
+  }
+}
+@for $i from 1 through 100 {
+  .stats-bar--rank-#{$i} {
+    &:after {
+      $value: ($i * 1%);
+      width: $value;
+    }
+  }
+}
+@for $i from 1 through 100 {
+  .stats-bar--contribution-#{$i} {
     &:after {
       $value: ($i * 1%);
       width: $value;
@@ -37,4 +63,41 @@
 }
 .stats-list__rank, .stats-list__contribution {
     justify-self: end;
+}
+.stats-list__category {
+    text-align: left;
+}
+
+// styling for tabs
+
+.stats span {
+    margin-right: 150px;
+    font-size: 12px;
+}
+.stats label {
+    margin-left: 44px;
+    font-size: 12px;
+    &:nth-child(7) {
+        margin-left: 68px;
+    }
+}
+
+input[name="stats__tab__item"] {
+    display: none;
+}
+
+.stats__tab__content {
+    display: none;
+    text-align: center;
+    margin-top: 28px;
+}
+
+#stats-list__volume-tab:checked ~ #stats-list__volume-tab__content,
+#stats-list__rank-tab:checked ~ #stats-list__rank-tab__content,
+#stats-list__contribution-tab:checked ~ #stats-list__contribution-tab__content {
+    display: block;
+}
+
+.stats__tabs input:checked + .stats__tab__item {
+    background-color: rgba(250, 251, 255, 0.2);
 }

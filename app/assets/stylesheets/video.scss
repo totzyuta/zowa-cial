@@ -66,25 +66,23 @@
     @include position(relative, $left: 70%, $bottom: 23px);
     padding: 10px;
 }
-.video__tab__item:hover {
-opacity: 0.75;
-}
+
 input[name="video__main__tab__item"] {
-display: none;
+    display: none;
 }
 
 .video__main__tab__content {
-display: none;
-text-align: center;
+    display: none;
+    text-align: center;
 }
 
 #video__main__stock:checked ~ #video__main__stock__content,
 #video__main__published:checked ~ #video__main__published__content,
 #video__main__paid:checked ~ #video__main__paid__content {
-display: block;
+    display: block;
 }
 
 .video__main__tabs input:checked + .video__main__tab__item {
-background-color: rgba(250, 251, 255, 0.2);
+    background-color: rgba(250, 251, 255, 0.2);
 }
     

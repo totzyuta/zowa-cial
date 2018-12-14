@@ -1,37 +1,109 @@
 <div class="stats">
     <p class="stats-title">タグ別の統計</p>
-    <div class="stats-list stats-list__title">
-        <p class="stats-list__category">カテゴリ</p>
-        <p class="stats-list__volume">動画数</p>
-        <p class="stats-list__rank">ランキング100位以内率</p>
-        <p class="stats-list__contribution">再生数寄与度</p>
-    </div>
-    <div class="stats-list">
-        <div class="stats-list__category">
-            <dt class="stats-list__category__name">ささやき</dt>
-            <dd class="stats-bar stats-bar-100"></dd>
+        <div class="stats__tabs">
+            <span class="stats-list__title　stats-list__category-tab">カテゴリー</span>
+            <input id="stats-list__volume-tab" type="radio" name="stats__tab__item">
+            <label for="stats-list__volume-tab" class="stats-list__title　stats__tab__item">動画数</label>
+            <input id="stats-list__rank-tab" type="radio" name="stats__tab__item">
+            <label for="stats-list__rank-tab" class="stats-list__title　stats__tab__item">ランキング100位以内率</label>
+            <input id="stats-list__contribution-tab" type="radio" name="stats__tab__item" checked>
+            <label for="stats-list__contribution-tab" class="stats-list__title　stats__tab__item">再生数寄与度</label>
+
+
+        <div class="stats__tab__content" id="stats-list__volume-tab__content">
+                
+            <div class="stats-list">
+                <div class="stats-list__category">
+                    <dt class="stats-list__category__name">ささやき</dt>
+                    <dd class="stats-bar--vol stats-bar--vol-100"></dd>
+                </div>
+                <p class="stats-list__volume">100</p>
+                <p class="stats-list__rank">20%</p>
+                <p class="stats-list__contribution">30%</p>
+            </div>
+            <div class="stats-list">
+                <div class="stats-list__category">
+                    <dt class="stats-list__category__name">耳かき</dt>
+                    <dd class="stats-bar--vol stats-bar--vol-90"></dd>
+                </div>
+                <p class="stats-list__volume">90</p>
+                <p class="stats-list__rank">35%</p>
+                <p class="stats-list__contribution">15%</p>
+            </div>
+            <div class="stats-list">
+                <div class="stats-list__category">
+                    <dt class="stats-list__category__name">ロールプレイ</dt>
+                    <dd class="stats-bar--vol stats-bar--vol-80"></dd>
+                </div>
+                <p class="stats-list__volume">80</p>
+                <p class="stats-list__rank">7.5%</p>
+                <p class="stats-list__contribution">7.5%</p>
+            </div>
+
         </div>
-        <p class="stats-list__volume">100</p>
-        <p class="stats-list__rank">20%</p>
-        <p class="stats-list__contribution">30%</p>
-    </div>
-    <div class="stats-list">
-        <div class="stats-list__category">
-            <dt class="stats-list__category__name">耳かき</dt>
-            <dd class="stats-bar stats-bar-90"></dd>
+        <div class="stats__tab__content" id="stats-list__rank-tab__content">
+                
+            <div class="stats-list">
+                <div class="stats-list__category">
+                    <dt class="stats-list__category__name">ささやき</dt>
+                    <dd class="stats-bar--rank stats-bar--rank-20"></dd>
+                </div>
+                <p class="stats-list__volume">100</p>
+                <p class="stats-list__rank">20%</p>
+                <p class="stats-list__contribution">30%</p>
+            </div>
+            <div class="stats-list">
+                <div class="stats-list__category">
+                    <dt class="stats-list__category__name">耳かき</dt>
+                    <dd class="stats-bar--rank stats-bar--rank-35"></dd>
+                </div>
+                <p class="stats-list__volume">90</p>
+                <p class="stats-list__rank">35%</p>
+                <p class="stats-list__contribution">15%</p>
+            </div>
+            <div class="stats-list">
+                <div class="stats-list__category">
+                    <dt class="stats-list__category__name">ロールプレイ</dt>
+                    <dd class="stats-bar--rank stats-bar--rank-7.5"></dd>
+                </div>
+                <p class="stats-list__volume">80</p>
+                <p class="stats-list__rank">7.5%</p>
+                <p class="stats-list__contribution">7.5%</p>
+            </div>
+
         </div>
-        <p class="stats-list__volume">90</p>
-        <p class="stats-list__rank">35%</p>
-        <p class="stats-list__contribution">15%</p>
-    </div>
-    <div class="stats-list">
-        <div class="stats-list__category">
-            <dt class="stats-list__category__name">ロールプレイ</dt>
-            <dd class="stats-bar stats-bar-80"></dd>
+        <div class="stats__tab__content" id="stats-list__contribution-tab__content">
+        
+            <div class="stats-list">
+                <div class="stats-list__category">
+                    <dt class="stats-list__category__name">ささやき</dt>
+                    <dd class="stats-bar--contribution stats-bar--contribution-30"></dd>
+                </div>
+                <p class="stats-list__volume">100</p>
+                <p class="stats-list__rank">20%</p>
+                <p class="stats-list__contribution">30%</p>
+            </div>
+            <div class="stats-list">
+                <div class="stats-list__category">
+                    <dt class="stats-list__category__name">耳かき</dt>
+                    <dd class="stats-bar--contribution stats-bar--contribution-15"></dd>
+                </div>
+                <p class="stats-list__volume">90</p>
+                <p class="stats-list__rank">35%</p>
+                <p class="stats-list__contribution">15%</p>
+            </div>
+            <div class="stats-list">
+                <div class="stats-list__category">
+                    <dt class="stats-list__category__name">ロールプレイ</dt>
+                    <dd class="stats-bar--contribution stats-bar--contribution-7.5"></dd>
+                </div>
+                <p class="stats-list__volume">80</p>
+                <p class="stats-list__rank">7.5%</p>
+                <p class="stats-list__contribution">7.5%</p>
+            </div>
+
         </div>
-        <p class="stats-list__volume">80</p>
-        <p class="stats-list__rank">7.5%</p>
-        <p class="stats-list__contribution">7.5%</p>
+
     </div>
 
 </div>
