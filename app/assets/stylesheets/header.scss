@@ -17,19 +17,20 @@
     margin: 14px;
 }
 .header__post {
-position: relative;
-overflow: hidden;
 display: inline-block;
 }
 .header__post__button{
-color: white;
-background-color: inherit;
-padding: 8px 20px;
-#file{
-    font-size: 100px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-}
+    color: white;
+    background-color: inherit;
+    border: 1px solid;
+    width: 98px;
+    height: 32px;
+    border-radius: 4px;
+    span{
+        height: 32px;
+        position: relative;
+        bottom: 11px;
+        font-size: 12px;
+        left: 9px;
+    }
 }
