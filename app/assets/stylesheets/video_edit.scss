@@ -44,6 +44,8 @@
 }
 .video-price {
     margin-top: 46px;
+    display: none;
+    width: 400px;
 }
 .video-price__form{
     @include input-form(44px);
@@ -51,6 +53,9 @@
 }
 .video-price__form__currency{
     margin-left: 20px;
+}
+#video-monetize__switch:checked ~ #video-monetize__switch__content {
+    display: block;
 }
 // style for switch
 
@@ -61,7 +66,7 @@
     height: 31px;
   }
   
-  .video-monetize__switch input {
+#video-monetize__switch {
     opacity: 0;
     width: 0;
     height: 0;
