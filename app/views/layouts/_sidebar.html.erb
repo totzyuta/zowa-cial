@@ -6,3 +6,15 @@
         <li class="sidebar__stats"><a href="/dashboard/stats/"><span><%= image_tag "stats.svg", :size =>'20x17', :class => 'sidebar-icon' %></span> ZOWAの統計</a></li>
     </ul>
 </div>
+<script>
+$(function(){
+    $('.sidebar li a').each(function(){
+      var $href = $(this).attr('href');
+      if(location.href.match($href)) {
+        $(this).parent().addClass('current');
+      } else {
+        $(this).parent().removeClass('current');
+      }
+    });
+  });
+</script>

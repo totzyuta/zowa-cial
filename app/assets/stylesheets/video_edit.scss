@@ -42,7 +42,16 @@
 .video-edit__uploads__video__button__advice{
     font-size: 12px;
 }
-
+.video-price {
+    margin-top: 46px;
+}
+.video-price__form{
+    @include input-form(44px);
+    width: 243px;
+}
+.video-price__form__currency{
+    margin-left: 20px;
+}
 // style for switch
 
 .video-monetize__switch {

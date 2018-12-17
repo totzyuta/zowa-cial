@@ -1,3 +1,5 @@
+<%= render 'layouts/header' %>
+<%= render 'layouts/sidebar' %>
 <div class="account__edit">
 
     <p class="account__edit__title">アカウント編集</p>
@@ -24,7 +26,7 @@
 
     <div class="account__user">
         <p>ユーザー名</p>
-        <input class="oneline-form" type="text" placeholder="ユーザー名を入力してください">
+        <input class="oneline-form" type="text" maxlength="15" placeholder="ユーザー名を入力してください">
     </div>
     <div class="account__tag">
         <p>属性タグ</p>
@@ -43,7 +45,7 @@
 
     <div class="account__about">
         <p>About</p>
-        <textarea class="account__about__form" type="text" placeholder="あいさつや動画の方針、活動内容など、あなたの紹介文を入力してください。"></textarea>
+        <textarea class="account__about__form" type="text" maxlength="200" placeholder="あいさつや動画の方針、活動内容など、あなたの紹介文を入力してください。"></textarea>
     </div>
     <div class="account__twitter">
         <p>Twitter</p>

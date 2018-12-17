@@ -1,15 +1,18 @@
+<%= render 'layouts/header' %>
+<%= render 'layouts/sidebar' %>
+
 <div class="video-edit">
     <div class="video-edit-top">
         <p class="video-edit__top__title">動画編集</p>
         <button class="video-edit__top__save">更新する</button>
     </div>
     <div class="video-title">
-        <p>動画タイトル</p>
-        <input class="oneline-form" type="text" placeholder="動画タイトルを入力してください">
+        <p>動画タイトル<span class="required">*</span></p>
+        <input class="oneline-form" type="text" maxlength="40" placeholder="動画タイトルを入力してください" required>
     </div>
     <div class="video-edit__uploads">
         <div class="video-edit__uploads__video">
-            <p>動画ファイル<span class="must">*</span></p>
+            <p>動画ファイル<span class="required">*</span></p>
             <button class="video-edit__uploads__video__button" method="post" enctype="multipart/form-data">
                 <div class="video-edit__uploads__video__button__img">
                 </div>
@@ -37,7 +40,7 @@
     </div>
     <div class="video-about">
         <p>動画説明文</p>
-        <textarea class="video-about__form" type="text" placeholder="動画説明文を入力してください。"></textarea>
+        <textarea class="video-about__form" type="text" maxlength="1000" placeholder="動画説明文を入力してください。"></textarea>
     </div>
     <div class="video-monetize">
         <p class="video-monetize__title">有料動画にする</p>
@@ -45,4 +48,8 @@
             <input type="checkbox">
             <span class="video-monetize__switch__slider"></span>
         </label>
+        <div class="video-price">
+        <p>販売価格<span class="required">*</span></p>
+        <input class="video-price__form" type="text" placeholder="動画説明文を入力してください。"><span class="video-price__form__currency">円</span>
+        </div>
     </div>

@@ -1,9 +1,13 @@
 @import 'mixin.scss';
 
+.required{
+    color: red;
+}
 
 .video__main {
     overflow: scroll;
     height: 100%;
+    min-height: 1200px;
 }
 .video__main__top {
     @include position(relative, $left: 10%, $top: 68px);
@@ -57,8 +61,9 @@
 .video__info__date {
     align-self: end;
 }
-.big-placeholder {
-    height: 780px;
+
+.video__info__tags {
+    font-size: 14px;
 }
 
 // styling for tabs

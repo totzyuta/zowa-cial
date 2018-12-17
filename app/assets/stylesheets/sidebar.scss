@@ -1,5 +1,6 @@
 @import 'mixin.scss';
 
+
 .sidebar-wrapper{
     background-color: rgba(0, 0, 0, 0.4);
     height: 100%;
@@ -10,9 +11,19 @@
 .sidebar {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 70px 70px 70px;
+    grid-template-rows: 48px 48px 48px 48px;
     @include position(relative, $top: 80px);
     list-style-type: none;
+    padding: 0;
+    a{
+        @include position(relative, $left: 40px);
+        @include vertical-center-for-one-line(48px);
+    }
+    .current {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-left: 3px solid #f8e71c;
+    }
+
 }
 .sidebar-icon {
     position: relative;
