@@ -1,57 +1,61 @@
-<%= render 'layouts/header' %>
-<%= render 'layouts/sidebar' %>
-<div class="account">
-    <div class="account__top">
-        <div class="account__top__info">
-            <div class="account__top__info__left">
-                <p class="account__top__title">アカウント</p>
-                <img class="account__top__img" src="https://via.placeholder.com/76x112p" alt="account__img">
-            </div>
-            <div class="account__top__info__middle">
-                <p class="account__top__info__name">あしもす</p>
-                <p class="account__top__info__follower">フォロワー数: 5,882</p>
-                <p class="account__top__info__playtime">総再生数: 20,000</p>
-                <p class="account__top__info__tags"><span class="account__tag">スライム</span><span class="account__tag">ささやき</span><span class="account__tag">バイノーラル録音</span></p>
-            </div>
-            <div class="account__top__info__right">
-                <a href="/dashboard/account_edit/" class="account__top__edit">編集する</a>
-            </div>
-        </div>
-    </div>
-        <div class="account__about">
-        <p>About</p>
-        <div class="account__about__form" type="text" placeholder="あいさつや動画の方針、活動内容など、あなたの紹介文を入力してください。"></div>
-    </div>
-    <div class="account__twitter">
-        <p><span><%= image_tag "twitter-white.svg", :size =>'16x16', :class => 'sns-icon' %></span>Twitter</p>
-        <div class="oneline-form" type="text" placeholder="ユーザーIDを入力してください"></div>
-    </div>
-    <div class="account__instagram">
-        <p><span><%= image_tag "instagram.svg", :size =>'16x16', :class => 'sns-icon' %></span>Instagram</p>
-        <div class="oneline-form" type="text" placeholder="ユーザーIDを入力してください"></div>
-    </div>
-    <div class="account__youtube">
-        <p><span><%= image_tag "youtube.svg", :size =>'16x16', :class => 'sns-icon' %></span>YouTube</p>
-        <div class="oneline-form" type="text" placeholder="URLを入力してください"></div>
-    </div>
-    <div class="account__niconico">
-        <p><span><%= image_tag "niconico.svg", :size =>'16x16', :class => 'sns-icon' %></span>ニコニコ動画</p>
-        <div class="oneline-form" type="text" placeholder="URLを入力してください"></div>
-        </div>
-    <div class="account__others">
-        <p><span><%= image_tag "site.svg", :size =>'16x16', :class => 'sns-icon' %></span>その他</p>
-        <div class="oneline-form" type="text" placeholder="URLを入力してください"></div>
-        </div>
-    <div class="account__private">
-        <p>非公開情報</p>
-        <div class="account__private__mail">
-            <p>メールアドレス</p>
-            <div class="oneline-form" type="mail" placeholder="メールアドレスを入力してください"></div>
-        </div>
-        <div class="account__private__pswd">
-            <p>パスワード</p>
-            <div class="oneline-form" type="password" placeholder="メールアドレスを入力してください"></div>
-        </div>
-    </div>
+<div class="dashboard">
 
+    <%= render 'layouts/header' %>
+    <%= render 'layouts/sidebar' %>
+    <div class="account">
+        <div class="account__top">
+            <div class="account__top__info">
+                <div class="account__top__info__left">
+                    <p class="account__top__title">アカウント</p>
+                    <img class="account__top__img" src="https://via.placeholder.com/76x112p" alt="account__img">
+                </div>
+                <div class="account__top__info__middle">
+                    <p class="account__top__info__name">あしもす</p>
+                    <p class="account__top__info__follower">フォロワー数: 5,882</p>
+                    <p class="account__top__info__playtime">総再生数: 20,000</p>
+                    <p class="account__top__info__tags"><span class="account__tag">スライム</span><span
+                            class="account__tag">ささやき</span><span class="account__tag">バイノーラル録音</span></p>
+                </div>
+                <div class="account__top__info__right">
+                    <a href="/dashboard/account_edit/" class="account__top__edit">編集する</a>
+                </div>
+            </div>
+        </div>
+        <div class="account__about">
+            <p>About</p>
+            <div class="account__about__form" type="text" placeholder="あいさつや動画の方針、活動内容など、あなたの紹介文を入力してください。"></div>
+        </div>
+        <div class="account__twitter">
+            <p><span><%= image_tag "twitter-white.svg", :size =>'16x16', :class => 'sns-icon' %></span>Twitter</p>
+            <div class="oneline-form" type="text" placeholder="ユーザーIDを入力してください"></div>
+        </div>
+        <div class="account__instagram">
+            <p><span><%= image_tag "instagram.svg", :size =>'16x16', :class => 'sns-icon' %></span>Instagram</p>
+            <div class="oneline-form" type="text" placeholder="ユーザーIDを入力してください"></div>
+        </div>
+        <div class="account__youtube">
+            <p><span><%= image_tag "youtube.svg", :size =>'16x16', :class => 'sns-icon' %></span>YouTube</p>
+            <div class="oneline-form" type="text" placeholder="URLを入力してください"></div>
+        </div>
+        <div class="account__niconico">
+            <p><span><%= image_tag "niconico.svg", :size =>'16x16', :class => 'sns-icon' %></span>ニコニコ動画</p>
+            <div class="oneline-form" type="text" placeholder="URLを入力してください"></div>
+        </div>
+        <div class="account__others">
+            <p><span><%= image_tag "site.svg", :size =>'16x16', :class => 'sns-icon' %></span>その他</p>
+            <div class="oneline-form" type="text" placeholder="URLを入力してください"></div>
+        </div>
+        <div class="account__private">
+            <p>非公開情報</p>
+            <div class="account__private__mail">
+                <p>メールアドレス</p>
+                <div class="oneline-form" type="mail" placeholder="メールアドレスを入力してください"></div>
+            </div>
+            <div class="account__private__pswd">
+                <p>パスワード</p>
+                <div class="oneline-form" type="password" placeholder="メールアドレスを入力してください"></div>
+            </div>
+        </div>
+
+    </div>
 </div>

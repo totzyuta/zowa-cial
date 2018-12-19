@@ -1,80 +1,109 @@
-<%= render 'layouts/header' %>
-<%= render 'layouts/sidebar' %>
-<div class="follower">
-    <p class="follower-count">フォロワー(182人)</p>
-    <form class="follower-search" action="">
-        <input class="follower-search__input" type="text" placeholder="ユーザー名で検索" name="search">
-        <button class="follower-search__button" type="submit"><%= image_tag "search.svg", :size =>'24x24'%></button></span>
-    </form>
-    <form class="follower-sort" action="#">
-        <span><%= image_tag "cursor.svg", :size =>'12x12', :class => 'search-cursor' %></span><select class="follower-sort__select" name="sort">
+<div class="dashboard">
+
+    <%= render 'layouts/header' %>
+    <%= render 'layouts/sidebar' %>
+    <div class="follower">
+        <p class="follower-count">フォロワー(182人)</p>
+        <form class="follower-search" action="">
+            <input class="follower-search__input" type="text" placeholder="ユーザー名で検索" name="search">
+            <button class="follower-search__button" type="submit"><%= image_tag "search.svg", :size =>'24x24'%></button>
+            </span>
+        </form>
+        <form class="follower-sort" action="#">
+            <span><%= image_tag "cursor.svg", :size =>'12x12', :class => 'search-cursor' %></span><select
+                class="follower-sort__select" name="sort">
             <option value="new-to-old">新しい順</option>
             <option value="old-to-new">古い順</option>
         </select>
-    </form>
-    <div class="follower-list">
-        <p class="follower-list__name">ユーザー</p>
-        <p class="follower-list__main">メールアドレス</p>
-        <p class="follower-list__date">フォロー日時</p>
-    </div>
-    <div class="follower-list">
-        <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17" alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span></p>
-        <p class="follower-list__main">yaharakabakyura@gmail.com</p>
-        <p class="follower-list__date">2018/10/4 10:00</p>
-    </div>
-    <div class="follower-list">
-        <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17" alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span></p>
-        <p class="follower-list__main">yaharakabakyura@gmail.com</p>
-        <p class="follower-list__date">2018/10/4 10:00</p>
-    </div>
-    <div class="follower-list">
-        <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17" alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span></p>
-        <p class="follower-list__main">yaharakabakyura@gmail.com</p>
-        <p class="follower-list__date">2018/10/4 10:00</p>
-    </div>
-    <div class="follower-list">
-        <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17" alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span></p>
-        <p class="follower-list__main">yaharakabakyura@gmail.com</p>
-        <p class="follower-list__date">2018/10/4 10:00</p>
-    </div>
-    <div class="follower-list">
-        <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17" alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span></p>
-        <p class="follower-list__main">yaharakabakyura@gmail.com</p>
-        <p class="follower-list__date">2018/10/4 10:00</p>
-    </div>
-    <div class="follower-list">
-        <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17" alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span></p>
-        <p class="follower-list__main">yaharakabakyura@gmail.com</p>
-        <p class="follower-list__date">2018/10/4 10:00</p>
-    </div>
-    <div class="follower-list">
-        <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17" alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span></p>
-        <p class="follower-list__main">yaharakabakyura@gmail.com</p>
-        <p class="follower-list__date">2018/10/4 10:00</p>
-    </div>
-    <div class="follower-list">
-        <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17" alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span></p>
-        <p class="follower-list__main">yaharakabakyura@gmail.com</p>
-        <p class="follower-list__date">2018/10/4 10:00</p>
-    </div>
-    <div class="follower-list">
-        <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17" alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span></p>
-        <p class="follower-list__main">yaharakabakyura@gmail.com</p>
-        <p class="follower-list__date">2018/10/4 10:00</p>
-    </div>
-    <div class="follower-list">
-        <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17" alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span></p>
-        <p class="follower-list__main">yaharakabakyura@gmail.com</p>
-        <p class="follower-list__date">2018/10/4 10:00</p>
-    </div>
-    <div class="follower-list">
-        <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17" alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span></p>
-        <p class="follower-list__main">yaharakabakyura@gmail.com</p>
-        <p class="follower-list__date">2018/10/4 10:00</p>
-    </div>
-    <div class="follower-list">
-        <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17" alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span></p>
-        <p class="follower-list__main">yaharakabakyura@gmail.com</p>
-        <p class="follower-list__date">2018/10/4 10:00</p>
+        </form>
+        <div class="follower-list">
+            <p class="follower-list__name">ユーザー</p>
+            <p class="follower-list__main">メールアドレス</p>
+            <p class="follower-list__date">フォロー日時</p>
+        </div>
+        <div class="follower-list">
+            <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17"
+                                                      alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span>
+            </p>
+            <p class="follower-list__main">yaharakabakyura@gmail.com</p>
+            <p class="follower-list__date">2018/10/4 10:00</p>
+        </div>
+        <div class="follower-list">
+            <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17"
+                                                      alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span>
+            </p>
+            <p class="follower-list__main">yaharakabakyura@gmail.com</p>
+            <p class="follower-list__date">2018/10/4 10:00</p>
+        </div>
+        <div class="follower-list">
+            <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17"
+                                                      alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span>
+            </p>
+            <p class="follower-list__main">yaharakabakyura@gmail.com</p>
+            <p class="follower-list__date">2018/10/4 10:00</p>
+        </div>
+        <div class="follower-list">
+            <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17"
+                                                      alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span>
+            </p>
+            <p class="follower-list__main">yaharakabakyura@gmail.com</p>
+            <p class="follower-list__date">2018/10/4 10:00</p>
+        </div>
+        <div class="follower-list">
+            <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17"
+                                                      alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span>
+            </p>
+            <p class="follower-list__main">yaharakabakyura@gmail.com</p>
+            <p class="follower-list__date">2018/10/4 10:00</p>
+        </div>
+        <div class="follower-list">
+            <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17"
+                                                      alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span>
+            </p>
+            <p class="follower-list__main">yaharakabakyura@gmail.com</p>
+            <p class="follower-list__date">2018/10/4 10:00</p>
+        </div>
+        <div class="follower-list">
+            <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17"
+                                                      alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span>
+            </p>
+            <p class="follower-list__main">yaharakabakyura@gmail.com</p>
+            <p class="follower-list__date">2018/10/4 10:00</p>
+        </div>
+        <div class="follower-list">
+            <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17"
+                                                      alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span>
+            </p>
+            <p class="follower-list__main">yaharakabakyura@gmail.com</p>
+            <p class="follower-list__date">2018/10/4 10:00</p>
+        </div>
+        <div class="follower-list">
+            <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17"
+                                                      alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span>
+            </p>
+            <p class="follower-list__main">yaharakabakyura@gmail.com</p>
+            <p class="follower-list__date">2018/10/4 10:00</p>
+        </div>
+        <div class="follower-list">
+            <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17"
+                                                      alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span>
+            </p>
+            <p class="follower-list__main">yaharakabakyura@gmail.com</p>
+            <p class="follower-list__date">2018/10/4 10:00</p>
+        </div>
+        <div class="follower-list">
+            <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17"
+                                                      alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span>
+            </p>
+            <p class="follower-list__main">yaharakabakyura@gmail.com</p>
+            <p class="follower-list__date">2018/10/4 10:00</p>
+        </div>
+        <div class="follower-list">
+            <p class="follower-list__name"><span><img class="user-icon" src="https://via.placeholder.com/24/17"
+                                                      alt="user-icon"></span> <span class="follower-list__user-name"> UXマン</span>
+            </p>
+            <p class="follower-list__main">yaharakabakyura@gmail.com</p>
+            <p class="follower-list__date">2018/10/4 10:00</p>
+        </div>
     </div>
 </div>

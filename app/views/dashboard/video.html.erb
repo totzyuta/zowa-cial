@@ -1,46 +1,67 @@
-<%= render 'layouts/header' %>
-<%= render 'layouts/sidebar' %>
-<div class="video__main">
-    <div class="video__main__top">
-        <p class="video__main__top__title">動画一覧</p>    
-        <form class="video__main__sort" action="#">
-            <div class="custom-select">
-                <span><%= image_tag "cursor.svg", :size =>'12x12', :class => 'search-cursor' %></span>
-                <select class="video__main__sort__select" name="sort">
-                    <option value="new-to-old">投稿が新しい順</option>
-                    <option value="old-to-new">投稿が古い順</option>
-                    <option value="more-to-less">再生多い順</option>
-                    <option value="less-to-more">再生少ない順</option>
-                </select>
-            </div>
-        </form>
-    </div>
-    <div class="video__main__tabs">
-        <input id="video__main__stock" type="radio" name="video__main__tab__item" checked>
-        <label for="video__main__stock" class="video__main__tab__item">編集中</label>
-        <input id="video__main__published" type="radio" name="video__main__tab__item">
-        <label for="video__main__published" class="video__main__tab__item">公開中</label>
-        <input id="video__main__paid" type="radio" name="video__main__tab__item">
-        <label for="video__main__paid" class="video__main__tab__item">有料作品</label>
+<div class="dashboard">
 
-        <div class="video__main__tab__content" id="video__main__stock__content">
-            <%# if video.blank %>
+    <%= render 'layouts/header' %>
+    <%= render 'layouts/sidebar' %>
+    <div class="video__main">
+        <div class="video__main__top">
+            <p class="video__main__top__title">動画一覧</p>
+            <form class="video__main__sort" action="#">
+                <div class="custom-select">
+                    <span><%= image_tag "cursor.svg", :size =>'12x12', :class => 'search-cursor' %></span>
+                    <select class="video__main__sort__select" name="sort">
+                        <option value="new-to-old">投稿が新しい順</option>
+                        <option value="old-to-new">投稿が古い順</option>
+                        <option value="more-to-less">再生多い順</option>
+                        <option value="less-to-more">再生少ない順</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="video__main__tabs">
+            <input id="video__main__stock" type="radio" name="video__main__tab__item" checked>
+            <label for="video__main__stock" class="video__main__tab__item">編集中</label>
+            <input id="video__main__published" type="radio" name="video__main__tab__item">
+            <label for="video__main__published" class="video__main__tab__item">公開中</label>
+            <input id="video__main__paid" type="radio" name="video__main__tab__item">
+            <label for="video__main__paid" class="video__main__tab__item">有料作品</label>
+
+            <div class="video__main__tab__content" id="video__main__stock__content">
+                <%# if video.blank %>
                 <div class="video__main__stock--empty">
                     <p><%= @user[:name] %>さん、こんにちは！</p>
                     <p>ここでは、アップロードした動画が表示されるよ</p>
                     <a href="/dashboard/video_edit/">
                         <div class="video__main__stock__upload">
-                            <button class="video__main__stock__upload__button" method="post" enctype="multipart/form-data">最初の動画をアップロードしよう！
-                            <input accept='video/*' type="file" id="file" name="video">
+                            <button class="video__main__stock__upload__button" method="post"
+                                    enctype="multipart/form-data">最初の動画をアップロードしよう！
+                                <input accept='video/*' type="file" id="file" name="video">
                             </button>
                         </div>
                     </a>
                 </div>
-            <%# else 
+                <%# else
                 <div class="video__main__stock--draft">
                     <a href="/dashboard/video_edit/">
+                        <div class="video__list">
+                            <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails"
+                                 class="video__thumbnail">
+                            <div class="video__info">
+                                <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
+                                <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
+                                <span class="video__info__length">再生時間 2:00:04</span>
+                            </div>
+                            <div class="video__info__date">2018/07/15</div>
+                        </div>
+                    </a>
+                </div>
+                end %>
+            </div>
+
+            <div class="video__main__tab__content" id="video__main__published__content">
+                <a href="/dashboard/video_edit/">
                     <div class="video__list">
-                        <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails" class="video__thumbnail">
+                        <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails"
+                             class="video__thumbnail">
                         <div class="video__info">
                             <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
                             <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
@@ -48,147 +69,142 @@
                         </div>
                         <div class="video__info__date">2018/07/15</div>
                     </div>
-                    </a>
-                </div>
-             end %>
-        </div>
-
-        <div class="video__main__tab__content" id="video__main__published__content">
-            <a href="/dashboard/video_edit/">
-            <div class="video__list">
-                <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails" class="video__thumbnail">
-                <div class="video__info">
-                    <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
-                    <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
-                    <span class="video__info__length">再生時間 2:00:04</span>
-                </div>
-                <div class="video__info__date">2018/07/15</div>
+                </a>
+                <a href="/dashboard/video_edit/">
+                    <div class="video__list">
+                        <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails"
+                             class="video__thumbnail">
+                        <div class="video__info">
+                            <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
+                            <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
+                            <span class="video__info__length">再生時間 2:00:04</span>
+                        </div>
+                        <div class="video__info__date">2018/07/15</div>
+                    </div>
+                </a>
+                <a href="/dashboard/video_edit/">
+                    <div class="video__list">
+                        <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails"
+                             class="video__thumbnail">
+                        <div class="video__info">
+                            <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
+                            <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
+                            <span class="video__info__length">再生時間 2:00:04</span>
+                        </div>
+                        <div class="video__info__date">2018/07/15</div>
+                    </div>
+                </a>
+                <a href="/dashboard/video_edit/">
+                    <div class="video__list">
+                        <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails"
+                             class="video__thumbnail">
+                        <div class="video__info">
+                            <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
+                            <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
+                            <span class="video__info__length">再生時間 2:00:04</span>
+                        </div>
+                        <div class="video__info__date">2018/07/15</div>
+                    </div>
+                </a>
+                <a href="/dashboard/video_edit/">
+                    <div class="video__list">
+                        <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails"
+                             class="video__thumbnail">
+                        <div class="video__info">
+                            <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
+                            <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
+                            <span class="video__info__length">再生時間 2:00:04</span>
+                        </div>
+                        <div class="video__info__date">2018/07/15</div>
+                    </div>
+                </a>
+                <a href="/dashboard/video_edit/">
+                    <div class="video__list">
+                        <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails"
+                             class="video__thumbnail">
+                        <div class="video__info">
+                            <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
+                            <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
+                            <span class="video__info__length">再生時間 2:00:04</span>
+                        </div>
+                        <div class="video__info__date">2018/07/15</div>
+                    </div>
+                </a>
             </div>
-            </a>
-            <a href="/dashboard/video_edit/">
-            <div class="video__list">
-                <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails" class="video__thumbnail">
-                <div class="video__info">
-                    <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
-                    <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
-                    <span class="video__info__length">再生時間 2:00:04</span>
-                </div>
-                <div class="video__info__date">2018/07/15</div>
+            <div class="video__main__tab__content" id="video__main__paid__content">
+                <a href="/dashboard/video_edit/">
+                    <div class="video__list">
+                        <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails"
+                             class="video__thumbnail">
+                        <div class="video__info">
+                            <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
+                            <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
+                            <span class="video__info__length">再生時間 2:00:04</span>
+                        </div>
+                        <div class="video__info__date">2018/07/15</div>
+                    </div>
+                </a>
+                <a href="/dashboard/video_edit/">
+                    <div class="video__list">
+                        <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails"
+                             class="video__thumbnail">
+                        <div class="video__info">
+                            <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
+                            <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
+                            <span class="video__info__length">再生時間 2:00:04</span>
+                        </div>
+                        <div class="video__info__date">2018/07/15</div>
+                    </div>
+                </a>
+                <a href="/dashboard/video_edit/">
+                    <div class="video__list">
+                        <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails"
+                             class="video__thumbnail">
+                        <div class="video__info">
+                            <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
+                            <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
+                            <span class="video__info__length">再生時間 2:00:04</span>
+                        </div>
+                        <div class="video__info__date">2018/07/15</div>
+                    </div>
+                </a>
+                <a href="/dashboard/video_edit/">
+                    <div class="video__list">
+                        <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails"
+                             class="video__thumbnail">
+                        <div class="video__info">
+                            <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
+                            <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
+                            <span class="video__info__length">再生時間 2:00:04</span>
+                        </div>
+                        <div class="video__info__date">2018/07/15</div>
+                    </div>
+                </a>
+                <a href="/dashboard/video_edit/">
+                    <div class="video__list">
+                        <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails"
+                             class="video__thumbnail">
+                        <div class="video__info">
+                            <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
+                            <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
+                            <span class="video__info__length">再生時間 2:00:04</span>
+                        </div>
+                        <div class="video__info__date">2018/07/15</div>
+                    </div>
+                </a>
+                <a href="/dashboard/video_edit/">
+                    <div class="video__list">
+                        <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails"
+                             class="video__thumbnail">
+                        <div class="video__info">
+                            <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
+                            <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
+                            <span class="video__info__length">再生時間 2:00:04</span>
+                        </div>
+                        <div class="video__info__date">2018/07/15</div>
+                    </div>
+                </a>
             </div>
-            </a>
-            <a href="/dashboard/video_edit/">
-            <div class="video__list">
-                <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails" class="video__thumbnail">
-                <div class="video__info">
-                    <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
-                    <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
-                    <span class="video__info__length">再生時間 2:00:04</span>
-                </div>
-                <div class="video__info__date">2018/07/15</div>
-            </div>
-            </a>
-            <a href="/dashboard/video_edit/">
-            <div class="video__list">
-                <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails" class="video__thumbnail">
-                <div class="video__info">
-                    <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
-                    <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
-                    <span class="video__info__length">再生時間 2:00:04</span>
-                </div>
-                <div class="video__info__date">2018/07/15</div>
-            </div>
-            </a>
-            <a href="/dashboard/video_edit/">
-            <div class="video__list">
-                <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails" class="video__thumbnail">
-                <div class="video__info">
-                    <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
-                    <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
-                    <span class="video__info__length">再生時間 2:00:04</span>
-                </div>
-                <div class="video__info__date">2018/07/15</div>
-            </div>
-            </a>
-            <a href="/dashboard/video_edit/">
-            <div class="video__list">
-                <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails" class="video__thumbnail">
-                <div class="video__info">
-                    <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
-                    <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
-                    <span class="video__info__length">再生時間 2:00:04</span>
-                </div>
-                <div class="video__info__date">2018/07/15</div>
-            </div>
-            </a>
-        </div>
-        <div class="video__main__tab__content" id="video__main__paid__content">
-            <a href="/dashboard/video_edit/">
-            <div class="video__list">
-                <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails" class="video__thumbnail">
-                <div class="video__info">
-                    <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
-                    <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
-                    <span class="video__info__length">再生時間 2:00:04</span>
-                </div>
-                <div class="video__info__date">2018/07/15</div>
-            </div>
-            </a>
-            <a href="/dashboard/video_edit/">
-            <div class="video__list">
-                <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails" class="video__thumbnail">
-                <div class="video__info">
-                    <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
-                    <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
-                    <span class="video__info__length">再生時間 2:00:04</span>
-                </div>
-                <div class="video__info__date">2018/07/15</div>
-            </div>
-            </a>
-            <a href="/dashboard/video_edit/">
-            <div class="video__list">
-                <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails" class="video__thumbnail">
-                <div class="video__info">
-                    <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
-                    <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
-                    <span class="video__info__length">再生時間 2:00:04</span>
-                </div>
-                <div class="video__info__date">2018/07/15</div>
-            </div>
-            </a>
-            <a href="/dashboard/video_edit/">
-            <div class="video__list">
-                <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails" class="video__thumbnail">
-                <div class="video__info">
-                    <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
-                    <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
-                    <span class="video__info__length">再生時間 2:00:04</span>
-                </div>
-                <div class="video__info__date">2018/07/15</div>
-            </div>
-            </a>
-            <a href="/dashboard/video_edit/">
-            <div class="video__list">
-                <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails" class="video__thumbnail">
-                <div class="video__info">
-                    <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
-                    <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
-                    <span class="video__info__length">再生時間 2:00:04</span>
-                </div>
-                <div class="video__info__date">2018/07/15</div>
-            </div>
-            </a>
-            <a href="/dashboard/video_edit/">
-            <div class="video__list">
-                <img src="https://via.placeholder.com/169x92.png" alt="video__thumbnails" class="video__thumbnail">
-                <div class="video__info">
-                    <h2 class="video__info__title">キネスティックサンドで遊びながらささやき声</h2>
-                    <p class="video__info__tags">スライム, キネスティックサンド, 包丁の音,ささやき</p>
-                    <span class="video__info__length">再生時間 2:00:04</span>
-                </div>
-                <div class="video__info__date">2018/07/15</div>
-            </div>
-            </a>
         </div>
     </div>
 </div>
-

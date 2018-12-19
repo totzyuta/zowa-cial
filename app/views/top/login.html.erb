@@ -1,25 +1,28 @@
-<header class="header">
-  <div class="header__left">
-    <img class="header__logo" src="https://via.placeholder.com/28" alt="logo">
-  </div>
-  <div class="header__middle"></div>
-  <div class="header__right">
-  </div>
-</header>
+<div class="top">
+    <header class="top-header">
+        <div class="header__left">
+            <img class="header__logo" src="https://via.placeholder.com/28" alt="logo">
+        </div>
+        <div class="header__middle"></div>
+        <div class="header__right">
+        </div>
+    </header>
+    <div class="form-wrapper">
+        <form class="login">
+            <ul>
+                <div>メールアドレス
+                    <input type="text" name="company" id="form_id"
+                           class="top-form validate[required]" data-prompt-position="inline"/>
+                </div>
+                <div>パスワード
+                    <input type="text" name="name" class="top-form validate[required]"/>
+                </div>
+            </ul>
+            <div>
+                <input class="login__button" type="submit" value="ログイン">
+            </div>
+        </form>
+        <a href="/top/signup/" class="top__new-customer">新規登録はこちら</a>
 
-<form class="login">
-  <ul>
-    <div>メールアドレス
-      <input type="text" name="company" id="form_id" 
-      class="top-form validate[required]" data-prompt-position="inline"/>
     </div>
-    <div>パスワード
-      <input type="text" name="name" class="top-form validate[required]"/>
-    </div>
-  </ul>
-    <div>
-      <input class="login__button" type="submit" value="ログイン">
-    </div>
-</form>
-  <a href="/top/signup/" class="top__new-customer">新規登録はこちら</a>
-
+</div>

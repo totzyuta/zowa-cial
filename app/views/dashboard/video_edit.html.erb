@@ -1,83 +1,90 @@
-<%= render 'layouts/header' %>
-<div class="sidebar-wrapper">
-    <ul class='sidebar'>
-        <li class="sidebar__movie current"><a href="/dashboard/video/"><span><%= image_tag "movie.svg", :size =>'20x17', :class => 'sidebar-icon' %></span> 動画</a></li>
-        <li class="sidebar__account"><a href="/dashboard/account/"><span><%= image_tag "human.svg", :size =>'20x17', :class => 'sidebar-icon' %></span> アカウント</a></li>
-        <li class="sidebar__follower"><a href="/dashboard/follower/"><span><%= image_tag "community.svg", :size =>'20x17', :class => 'sidebar-icon' %></span> フォロワー</a></li>
-        <li class="sidebar__stats"><a href="/dashboard/stats/"><span><%= image_tag "stats.svg", :size =>'20x17', :class => 'sidebar-icon' %></span> ZOWAの統計</a></li>
-    </ul>
-</div>
-<div class="video-edit">
-    <div class="video-edit-top">
-        <p class="video-edit__top__title">動画編集</p>
-        <button class="video-edit__top__save">更新する</button>
+<div class="dashboard">
+
+    <%= render 'layouts/header' %>
+    <div class="sidebar-wrapper">
+        <ul class='sidebar'>
+            <li class="sidebar__movie current"><a href="/dashboard/video/"><span><%= image_tag "movie.svg", :size =>'20x17', :class => 'sidebar-icon' %></span>
+                動画</a></li>
+            <li class="sidebar__account"><a href="/dashboard/account/"><span><%= image_tag "human.svg", :size =>'20x17', :class => 'sidebar-icon' %></span>
+                アカウント</a></li>
+            <li class="sidebar__follower"><a href="/dashboard/follower/"><span><%= image_tag "community.svg", :size =>'20x17', :class => 'sidebar-icon' %></span>
+                フォロワー</a></li>
+            <li class="sidebar__stats"><a href="/dashboard/stats/"><span><%= image_tag "stats.svg", :size =>'20x17', :class => 'sidebar-icon' %></span>
+                ZOWAの統計</a></li>
+        </ul>
     </div>
-    <div class="video-title">
-        <p>動画タイトル<span class="required">*</span></p>
-        <input class="oneline-form" type="text" maxlength="40" placeholder="動画タイトルを入力してください" required>
-    </div>
-    <div class="video-edit__uploads">
-        <div class="video-edit__uploads__video">
-            <p>動画ファイル<span class="required">*</span></p>
-            <button class="video-edit__uploads__video__button" method="post" enctype="multipart/form-data">
-                <div class="video-edit__uploads__video__button__img">
-                </div>
-                <p class="video-edit__uploads__video__button__info">ファイルを選択 or ドラッグ&ドロップ</p>
-                <p class="video-edit__uploads__video__button__advice">推奨：16:9の動画（５GBまで）</p>
-                <input accept='video/*' type="file" id="file" name="video">
-                <input accept='video/*' id="fileInput" type="file" name="video">
-            </button>
+    <div class="video-edit">
+        <div class="video-edit-top">
+            <p class="video-edit__top__title">動画編集</p>
+            <button class="video-edit__top__save">更新する</button>
         </div>
-        <div class="video-edit__uploads__thumbnail">
-            <p>サムネイル画像</p>
-            <button class="video-edit__uploads__thumbnail__button" method="post" enctype="multipart/form-data">
-                <div class="video-edit__uploads__video__button__img">
-                </div>
-                <p class="video-edit__uploads__video__button__info">ファイルを選択 or ドラッグ&ドロップ</p>
-                <p class="video-edit__uploads__video__button__advice">推奨：横幅750px以上の16:9の画像</p>
-                <input accept='video/*' type="file" id="file" name="video">
-                <input accept='video/*' id="fileInput" type="file" name="video">
-            </button>
+        <div class="video-title">
+            <p>動画タイトル<span class="required">*</span></p>
+            <input class="oneline-form" type="text" maxlength="40" placeholder="動画タイトルを入力してください" required>
         </div>
-    </div>
-    <div class="video-tag">
-        <p>タグ</p>
-        <input class="oneline-form" type="text" placeholder="タグを入力してください">
-    </div>
-    <div class="video-about">
-        <p>動画説明文</p>
-        <textarea class="video-about__form" type="text" maxlength="1000" placeholder="動画説明文を入力してください。"></textarea>
-    </div>
-    <div class="video-monetize">
-        <p class="video-monetize__title">有料動画にする</p>
-        <label class="video-monetize__switch">
-            <input id="video-monetize__switch" type="checkbox">
-            <span class="video-monetize__switch__slider"></span>
-            <div id="video-monetize__switch__content" class="video-price">
-                <p>販売価格<span class="required">*</span></p>
-                <input class="video-price__form" type="text" placeholder="価格を入力してください。">
-                <span class="video-price__form__currency">円</span>
+        <div class="video-edit__uploads">
+            <div class="video-edit__uploads__video">
+                <p>動画ファイル<span class="required">*</span></p>
+                <button class="video-edit__uploads__video__button" method="post" enctype="multipart/form-data">
+                    <div class="video-edit__uploads__video__button__img">
+                    </div>
+                    <p class="video-edit__uploads__video__button__info">ファイルを選択 or ドラッグ&ドロップ</p>
+                    <p class="video-edit__uploads__video__button__advice">推奨：16:9の動画（５GBまで）</p>
+                    <input accept='video/*' type="file" id="file" name="video">
+                    <input accept='video/*' id="fileInput" type="file" name="video">
+                </button>
             </div>
-        </label>
-    </div>
-    <p class="video-tips-title">TIPS</p>
-    <div class="video-tips-wrapper">
-        <div class="video-tips">
-            <div class="video-tips__message">
-                <p class="video-tips__message__title">秒数指定について</p>
-                <p class="video-tips__message__content">
-                mm:ss形式で秒数を指定すると、その秒数から再生される動画内リンクになります。
-                動画のハイライト部分を表記して視聴しやすくしてあげるとよいかもしれません。
-                </p>
+            <div class="video-edit__uploads__thumbnail">
+                <p>サムネイル画像</p>
+                <button class="video-edit__uploads__thumbnail__button" method="post" enctype="multipart/form-data">
+                    <div class="video-edit__uploads__video__button__img">
+                    </div>
+                    <p class="video-edit__uploads__video__button__info">ファイルを選択 or ドラッグ&ドロップ</p>
+                    <p class="video-edit__uploads__video__button__advice">推奨：横幅750px以上の16:9の画像</p>
+                    <input accept='video/*' type="file" id="file" name="video">
+                    <input accept='video/*' id="fileInput" type="file" name="video">
+                </button>
             </div>
         </div>
-        <div class="video-tips">
-            <div class="video-tips__message">
-                <p class="video-tips__message__title">秒数指定について</p>
-                <p class="video-tips__message__content">
-                mm:ss形式で秒数を指定すると、その秒数から再生される動画内リンクになります。
-                動画のハイライト部分を表記して視聴しやすくしてあげるとよいかもしれません。
-                </p>
+        <div class="video-tag">
+            <p>タグ</p>
+            <input class="oneline-form" type="text" placeholder="タグを入力してください">
+        </div>
+        <div class="video-about">
+            <p>動画説明文</p>
+            <textarea class="video-about__form" type="text" maxlength="1000" placeholder="動画説明文を入力してください。"></textarea>
+        </div>
+        <div class="video-monetize">
+            <p class="video-monetize__title">有料動画にする</p>
+            <label class="video-monetize__switch">
+                <input id="video-monetize__switch" type="checkbox">
+                <span class="video-monetize__switch__slider"></span>
+                <div id="video-monetize__switch__content" class="video-price">
+                    <p>販売価格<span class="required">*</span></p>
+                    <input class="video-price__form" type="text" placeholder="価格を入力してください。">
+                    <span class="video-price__form__currency">円</span>
+                </div>
+            </label>
+        </div>
+        <p class="video-tips-title">TIPS</p>
+        <div class="video-tips-wrapper">
+            <div class="video-tips">
+                <div class="video-tips__message">
+                    <p class="video-tips__message__title">秒数指定について</p>
+                    <p class="video-tips__message__content">
+                        mm:ss形式で秒数を指定すると、その秒数から再生される動画内リンクになります。
+                        動画のハイライト部分を表記して視聴しやすくしてあげるとよいかもしれません。
+                    </p>
+                </div>
+            </div>
+            <div class="video-tips">
+                <div class="video-tips__message">
+                    <p class="video-tips__message__title">秒数指定について</p>
+                    <p class="video-tips__message__content">
+                        mm:ss形式で秒数を指定すると、その秒数から再生される動画内リンクになります。
+                        動画のハイライト部分を表記して視聴しやすくしてあげるとよいかもしれません。
+                    </p>
+                </div>
             </div>
         </div>
     </div>
