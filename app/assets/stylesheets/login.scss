@@ -10,6 +10,12 @@
 .top-form{
   @include input-form(44px);
   width: 335px;
+  margin: 17px 0 24px 0;
+  border: none;
+}
+.login{
+  width: 335px;
+  margin: auto;
 }
 .login__button{
   width: 234px;
@@ -18,5 +24,17 @@
   background-color: #f8e71c;
   font-size: 14px;
   box-shadow: 0px 4px 0px #d1b900;
+  margin: 30px auto 0;
+  display: block;
 }
-
+.top__new-customer{
+  font-size: 14px;
+  width: 234px;
+  height: 44px;
+  border-radius: 4px;
+  border: 1px solid;
+  display: block;
+  text-align: center;
+  line-height: 44px;
+  margin: 20px auto;
+}

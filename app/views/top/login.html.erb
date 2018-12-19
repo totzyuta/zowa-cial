@@ -8,21 +8,22 @@
         </div>
     </header>
     <div class="form-wrapper">
+        <div class="form-wrapper__title">
+            <p class="form-wrapper__title__text">ログイン</p>
+        </div>
         <form class="login">
-            <ul>
-                <div>メールアドレス
-                    <input type="text" name="company" id="form_id"
-                           class="top-form validate[required]" data-prompt-position="inline"/>
-                </div>
-                <div>パスワード
-                    <input type="text" name="name" class="top-form validate[required]"/>
-                </div>
-            </ul>
-            <div>
-                <input class="login__button" type="submit" value="ログイン">
+            <div>メールアドレス
+                <input type="email" name="email" class="top-form" placeholder="    メールアドレスを入力してください"/>
             </div>
+            <div>パスワード
+                <input type="password" name="password" class="top-form" placeholder="    パスワードを入力してください" />
+            </div>
+            <div>
+                <input class="login__button" type="submit" value="ログイン"/>
+            </div>
+
+            <a href="/top/signup/" class="top__new-customer">新規登録はこちら</a>
         </form>
-        <a href="/top/signup/" class="top__new-customer">新規登録はこちら</a>
 
     </div>
 </div>
