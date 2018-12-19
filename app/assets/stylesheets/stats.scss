@@ -7,8 +7,8 @@
     min-height: 1200px;
 }
 
-.stats-list__title{
-    font-size: 12px
+.stats-title {
+  margin-bottom: 48px;
 }
 .stats-list {
     display: grid;
@@ -78,9 +78,16 @@
 .stats label {
     margin-left: 44px;
     font-size: 12px;
+    opacity: 0.7;
     &:nth-child(7) {
         margin-left: 68px;
     }
+}
+.stats-list--active{
+    opacity: 1;
+}
+.stats-list--blur{
+    opacity: 0.7;
 }
 
 input[name="stats__tab__item"] {
@@ -93,6 +100,10 @@ input[name="stats__tab__item"] {
     margin-top: 28px;
 }
 
+.stats__tab__item{
+  font-size: 12px
+}
+
 #stats-list__volume-tab:checked ~ #stats-list__volume-tab__content,
 #stats-list__rank-tab:checked ~ #stats-list__rank-tab__content,
 #stats-list__contribution-tab:checked ~ #stats-list__contribution-tab__content {
@@ -100,5 +111,5 @@ input[name="stats__tab__item"] {
 }
 
 .stats__tabs input:checked + .stats__tab__item {
-    background-color: rgba(250, 251, 255, 0.2);
+    opacity: 1;
 }

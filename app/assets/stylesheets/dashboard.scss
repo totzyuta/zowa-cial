@@ -12,6 +12,8 @@ body{
     margin: 0;
     display: grid;
     grid-template-columns: 200px auto;
+    background-image: url(bg.svg);
+    background-repeat: no-repeat;
 }
 a {
     color: white;
