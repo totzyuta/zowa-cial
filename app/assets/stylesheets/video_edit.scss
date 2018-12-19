@@ -120,3 +120,21 @@
     }
   }
   
+//   tips
+.video-tips-title {
+    font-family: HiraginoSans-W9;
+    margin-top: 268px;
+}
+.video-tips-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+    margin-top: 32px;
+}
+.video-tips {
+    width: 364px;
+    height: 196px;
+    border: 1px solid white;
+    padding: 10px 28px 0 28px;
+    line-height: 1.75;
+}

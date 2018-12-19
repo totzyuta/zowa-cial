@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'top/login'
+  get 'top/signup'
   get 'dashboard/video'
   get 'dashboard/video_edit'
   get 'dashboard/account'

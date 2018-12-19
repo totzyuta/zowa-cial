@@ -1,6 +1,12 @@
 <%= render 'layouts/header' %>
-<%= render 'layouts/sidebar' %>
-
+<div class="sidebar-wrapper">
+    <ul class='sidebar'>
+        <li class="sidebar__movie current"><a href="/dashboard/video/"><span><%= image_tag "movie.svg", :size =>'20x17', :class => 'sidebar-icon' %></span> 動画</a></li>
+        <li class="sidebar__account"><a href="/dashboard/account/"><span><%= image_tag "human.svg", :size =>'20x17', :class => 'sidebar-icon' %></span> アカウント</a></li>
+        <li class="sidebar__follower"><a href="/dashboard/follower/"><span><%= image_tag "community.svg", :size =>'20x17', :class => 'sidebar-icon' %></span> フォロワー</a></li>
+        <li class="sidebar__stats"><a href="/dashboard/stats/"><span><%= image_tag "stats.svg", :size =>'20x17', :class => 'sidebar-icon' %></span> ZOWAの統計</a></li>
+    </ul>
+</div>
 <div class="video-edit">
     <div class="video-edit-top">
         <p class="video-edit__top__title">動画編集</p>
@@ -48,9 +54,31 @@
             <input id="video-monetize__switch" type="checkbox">
             <span class="video-monetize__switch__slider"></span>
             <div id="video-monetize__switch__content" class="video-price">
-            <p>販売価格<span class="required">*</span></p>
-            <input class="video-price__form" type="text" placeholder="価格を入力してください。"><span class="video-price__form__currency">円</span>
-        </div>
+                <p>販売価格<span class="required">*</span></p>
+                <input class="video-price__form" type="text" placeholder="価格を入力してください。">
+                <span class="video-price__form__currency">円</span>
+            </div>
         </label>
-
     </div>
+    <p class="video-tips-title">TIPS</p>
+    <div class="video-tips-wrapper">
+        <div class="video-tips">
+            <div class="video-tips__message">
+                <p class="video-tips__message__title">秒数指定について</p>
+                <p class="video-tips__message__content">
+                mm:ss形式で秒数を指定すると、その秒数から再生される動画内リンクになります。
+                動画のハイライト部分を表記して視聴しやすくしてあげるとよいかもしれません。
+                </p>
+            </div>
+        </div>
+        <div class="video-tips">
+            <div class="video-tips__message">
+                <p class="video-tips__message__title">秒数指定について</p>
+                <p class="video-tips__message__content">
+                mm:ss形式で秒数を指定すると、その秒数から再生される動画内リンクになります。
+                動画のハイライト部分を表記して視聴しやすくしてあげるとよいかもしれません。
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

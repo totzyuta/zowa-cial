@@ -4,12 +4,15 @@
     <div class="video__main__top">
         <p class="video__main__top__title">動画一覧</p>    
         <form class="video__main__sort" action="#">
-             <span><%= image_tag "cursor.svg", :size =>'12x12', :class => 'search-cursor' %></span><select class="video__main__sort__select" name="sort">
-                <option value="new-to-old">投稿が新しい順</option>
-                <option value="old-to-new">投稿が古い順</option>
-                <option value="more-to-less">再生多い順</option>
-                <option value="less-to-more">再生少ない順</option>
-            </select>
+            <div class="custom-select">
+                <span><%= image_tag "cursor.svg", :size =>'12x12', :class => 'search-cursor' %></span>
+                <select class="video__main__sort__select" name="sort">
+                    <option value="new-to-old">投稿が新しい順</option>
+                    <option value="old-to-new">投稿が古い順</option>
+                    <option value="more-to-less">再生多い順</option>
+                    <option value="less-to-more">再生少ない順</option>
+                </select>
+            </div>
         </form>
     </div>
     <div class="video__main__tabs">

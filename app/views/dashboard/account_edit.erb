@@ -1,5 +1,12 @@
 <%= render 'layouts/header' %>
-<%= render 'layouts/sidebar' %>
+<div class="sidebar-wrapper">
+    <ul class='sidebar'>
+        <li class="sidebar__movie"><a href="/dashboard/video/"><span><%= image_tag "movie.svg", :size =>'20x17', :class => 'sidebar-icon' %></span> 動画</a></li>
+        <li class="sidebar__account  current"><a href="/dashboard/account/"><span><%= image_tag "human.svg", :size =>'20x17', :class => 'sidebar-icon' %></span> アカウント</a></li>
+        <li class="sidebar__follower"><a href="/dashboard/follower/"><span><%= image_tag "community.svg", :size =>'20x17', :class => 'sidebar-icon' %></span> フォロワー</a></li>
+        <li class="sidebar__stats"><a href="/dashboard/stats/"><span><%= image_tag "stats.svg", :size =>'20x17', :class => 'sidebar-icon' %></span> ZOWAの統計</a></li>
+    </ul>
+</div>
 <div class="account__edit">
 
     <p class="account__edit__title">アカウント編集</p>
