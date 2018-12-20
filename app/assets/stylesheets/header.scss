@@ -37,8 +37,7 @@ display: inline-block;
 .top-header{
     @include vertical-center-for-one-line(60px);
     display: block;
-    box-shadow: 0 8px 24px 0 rgba(0, 7, 10, 0.2);
     width: 100%;
     display: grid;
-    grid-template-columns: 200px auto 20%;
+    grid-template-columns: 200px auto;
 }

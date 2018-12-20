@@ -3,9 +3,6 @@
         <div class="header__left">
             <img class="header__logo" src="https://via.placeholder.com/28" alt="logo">
         </div>
-        <div class="header__middle"></div>
-        <div class="header__right">
-        </div>
     </header>
     <div class="form-wrapper">
         <div class="form-wrapper__title">
@@ -14,12 +11,18 @@
         <form class="login">
             <div>メールアドレス
                 <input type="email" name="email" class="top-form" placeholder="    メールアドレスを入力してください"/>
+                <div class="form-error">
+                    <p class="form-error-msg">そのアドレスのアカウントは存在しないよ。</p>
+                </div>
             </div>
             <div>パスワード
                 <input type="password" name="password" class="top-form" placeholder="    パスワードを入力してください" />
+                <div class="form-error">
+                    <p class="form-error-msg">パスワードが間違ってるよ。</p>
+                </div>
             </div>
             <div>
-                <input class="login__button" type="submit" value="ログイン"/>
+                <input class="top__button" type="submit" value="ログイン"/>
             </div>
 
             <a href="/top/signup/" class="top__new-customer">新規登録はこちら</a>
