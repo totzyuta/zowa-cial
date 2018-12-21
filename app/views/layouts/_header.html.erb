@@ -1,11 +1,11 @@
 <header class="header">
     <div class="header__left">
-        <img class="header__logo" src="https://via.placeholder.com/28" alt="logo">
+        <%= image_tag "group-5@3x.png", :size =>'131x32', :class => 'header__logo' %>
     </div>
     <div class="header__middle"></div>
     <div class="header__right">
         <div class="info">
-            <label for="info-item"><img class="header__help" src="https://via.placeholder.com/28" alt="help"></label>
+            <label for="info-item"><%= image_tag "user-icon@3x.png", :size =>'28x28', :class => 'header__logo' %></label>
                 <input type="checkbox" id="info-item" />
                 <ul class="info-item-content" >
                 <li class="info-item-conent__list"><a class="info-item-content__link" href="#">ヘルプ</a></li>

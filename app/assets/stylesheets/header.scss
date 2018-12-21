@@ -11,13 +11,19 @@
 }
 .header__left{
     justify-self: end;
+    align-self: center;
 }
 .header__help {
     position: relative;
     margin: 14px;
 }
+.header__logo{
+    display: block;
+}
 .header__post {
-display: inline-block;
+    display: inline-block;
+    position: relative;
+    top: 14px;
 }
 .header__post__button{
     color: white;
@@ -44,6 +50,7 @@ display: inline-block;
 
 .info{
     display: inline-block;
+    @include position(relative, $top:8px, $right: 8px);
 }
 .info input{
     display: none;
