@@ -41,3 +41,36 @@ display: inline-block;
     display: grid;
     grid-template-columns: 200px auto;
 }
+
+.info{
+    display: inline-block;
+}
+.info input{
+    display: none;
+}
+.info-item-content {
+    display: none;
+    width: 242px;
+    height: 132px;
+    border-radius: 4px;
+    box-shadow: 0 4px 32px 0 rgba(73, 0, 138, 0.5);
+    background-color: #f0f5ff;
+    position: absolute;
+    margin: 0;
+    top: 58px;
+    right: 29px;
+    padding: 0;
+    z-index: 99;
+}
+.info-item-conent__list {
+    list-style: none;
+    height: 35px;
+    font-size: 14px;
+    margin-left: 16px;
+}
+.info-item-content__link{
+    color: #49008a;
+}
+.info input:checked ~ .info-item-content{
+    display: block;
+}
