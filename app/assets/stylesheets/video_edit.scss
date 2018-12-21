@@ -8,6 +8,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.uploads-icon {
+  position: relative;
+  top: 27px;
+}
 .video-edit__uploads__thumbnail, .video-edit__top__save{
     justify-self: end;
 }

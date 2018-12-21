@@ -27,8 +27,9 @@
                 <p>動画ファイル<span class="required">*</span></p>
                 <button class="video-edit__uploads__video__button" method="post" enctype="multipart/form-data">
                     <div class="video-edit__uploads__video__button__img">
+                        <%= image_tag "video.svg", :size =>'40x40', :class => 'uploads-icon' %>
+
                     </div>
-                    f
                     <p class="video-edit__uploads__video__button__info">ファイルを選択 or ドラッグ&ドロップ</p>
                     <p class="video-edit__uploads__video__button__advice">推奨：16:9の動画（５GBまで）</p>
                     <input accept='video/*' type="file" id="file" name="video">
@@ -39,6 +40,7 @@
                 <p>サムネイル画像</p>
                 <button class="video-edit__uploads__thumbnail__button" method="post" enctype="multipart/form-data">
                     <div class="video-edit__uploads__video__button__img">
+                        <%= image_tag "picture.svg", :size =>'40x40', :class => 'uploads-icon' %>
                     </div>
                     <p class="video-edit__uploads__video__button__info">ファイルを選択 or ドラッグ&ドロップ</p>
                     <p class="video-edit__uploads__video__button__advice">推奨：横幅750px以上の16:9の画像</p>
