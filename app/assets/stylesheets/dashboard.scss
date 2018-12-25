@@ -10,8 +10,14 @@ body{
     background-color: #49008a;
     color: white;
     margin: 0;
+    display: grid;
+    grid-template-columns: 200px auto;
 }
 a {
     color: white;
     text-decoration: none;
+}
+.search-cursor{
+    transform: rotate(90deg);
+    margin-right: 3px;
 }

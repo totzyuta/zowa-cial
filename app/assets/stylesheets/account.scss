@@ -1,0 +1,100 @@
+@import 'mixin.scss';
+
+.account__edit , .account{
+    display: grid;
+    grid-gap: 40px;
+    justify-items: center;
+    grid-area: 2/2/3/3;
+}
+
+.account__top {
+    width: 100%;
+    background: url("water-1330252_1280.jpg");
+}
+.account__top__info {
+    width: 612px;
+    height: 244px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 95px auto 128px;
+}
+.account__top__info__left {
+    position: relative;
+    top: 18%;
+    height: fit-content;
+}
+.account__top__info__middle {
+    position: relative;
+    top: 39%;
+    height: fit-content;
+}
+.account__top__info__middle p {
+    margin: 6px;
+}
+.account__top__info__tags span {
+    border: 1px solid white;
+    border-radius: 14px;
+    margin: 0 4px;
+}
+.account__top__info__right {
+    position: relative;
+    top: 75%;
+    height: fit-content;
+}
+.account__top__edit {
+    border: solid 1px white;
+    padding: 12px 31px;
+}
+
+.account__edit__imgs {
+    position: relative;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+.account__edit__imgs__user__button{
+    @include input-button(160px,160px);
+    background-color: rgba(250, 251, 255, 0.1);
+}
+.account__edit__imgs__cover__button{
+    @include input-button(160px,232px);
+    background-color: rgba(250, 251, 255, 0.1);
+}
+.account__edit__imgs__community__button{
+    @include input-button(235px,160px);
+    background-color: rgba(250, 251, 255, 0.1);
+}
+.account__about__form{
+    @include input-form(303px);
+}
+.oneline-form{
+    @include input-form(44px);
+}
+.account__edit__title {
+    width: 625px;
+    font-size: 20px;
+    margin-top: 68px;
+}
+.tag-suggest{
+    background-color: rgba(250, 251, 255, 0.1);
+    width: 612px;
+    height: 177px;
+    opacity: 0.7;
+    line-height: 15px;
+    font-size: 14px;
+}
+.tag-suggest__text{
+    margin: 15px;
+}
+.tag-suggest__text__content{
+    margin: 20px 0;
+}
+.account__private {
+    margin-bottom: 77px;
+}
+.sns-icon {
+    position: relative;
+    top: 3px;
+    margin-right: 4px;
+}

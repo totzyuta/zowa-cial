@@ -1,0 +1,49 @@
+@import 'mixin.scss';
+
+.follower {
+    width: 612px;
+    margin: 80px auto;
+}
+// search
+.follower-search {
+    position: relative;
+}
+.follower-search__input {
+    height: 40px;
+    width: 612px;
+    position: relative;
+}
+.follower-search__button {
+    width: 65px;
+    height: 46px;
+    background: yellow;
+    position: absolute;
+    top: 0;
+    right: -6px;
+}
+// sort
+.follower-sort {
+    margin: 32px 0;
+}
+.follower-sort__select{
+    @include sort;
+}
+// list
+.follower-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.follower-list__date {
+    justify-self: end;
+}
+.user-icon {
+    height: 24px;
+    width: 17px;
+}
+.follower-list__user-name{
+    position: relative;
+    bottom: 6px;
+}
+.follower-list__main, .follower-list__date{
+    @include vertical-center-for-one-line(24px);
+}

@@ -1,0 +1,48 @@
+<div class="video-edit">
+    <div class="video-edit-top">
+        <p class="video-edit__top__title">動画編集</p>
+        <button class="video-edit__top__save">更新する</button>
+    </div>
+    <div class="video-title">
+        <p>動画タイトル</p>
+        <input class="oneline-form" type="text" placeholder="動画タイトルを入力してください">
+    </div>
+    <div class="video-edit__uploads">
+        <div class="video-edit__uploads__video">
+            <p>動画ファイル<span class="must">*</span></p>
+            <button class="video-edit__uploads__video__button" method="post" enctype="multipart/form-data">
+                <div class="video-edit__uploads__video__button__img">
+                </div>
+                <p class="video-edit__uploads__video__button__info">ファイルを選択 or ドラッグ&ドロップ</p>
+                <p class="video-edit__uploads__video__button__advice">推奨：16:9の動画（５GBまで）</p>
+                <input accept='video/*' type="file" id="file" name="video">
+                <input accept='video/*' id="fileInput" type="file" name="video">
+            </button>
+        </div>
+        <div class="video-edit__uploads__thumbnail">
+            <p>サムネイル画像</p>
+            <button class="video-edit__uploads__thumbnail__button" method="post" enctype="multipart/form-data">
+                <div class="video-edit__uploads__video__button__img">
+                </div>
+                <p class="video-edit__uploads__video__button__info">ファイルを選択 or ドラッグ&ドロップ</p>
+                <p class="video-edit__uploads__video__button__advice">推奨：横幅750px以上の16:9の画像</p>
+                <input accept='video/*' type="file" id="file" name="video">
+                <input accept='video/*' id="fileInput" type="file" name="video">
+            </button>
+        </div>
+    </div>
+    <div class="video-tag">
+        <p>タグ</p>
+        <input class="oneline-form" type="text" placeholder="タグを入力してください">
+    </div>
+    <div class="video-about">
+        <p>動画説明文</p>
+        <textarea class="video-about__form" type="text" placeholder="動画説明文を入力してください。"></textarea>
+    </div>
+    <div class="video-monetize">
+        <p class="video-monetize__title">有料動画にする</p>
+        <label class="video-monetize__switch">
+            <input type="checkbox">
+            <span class="video-monetize__switch__slider"></span>
+        </label>
+    </div>

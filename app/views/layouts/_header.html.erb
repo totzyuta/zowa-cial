@@ -2,12 +2,18 @@
     <div class="header__left">
         <img class="header__logo" src="https://via.placeholder.com/28" alt="logo">
     </div>
+    <div class="header__middle"></div>
     <div class="header__right">
         <img class="header__help" src="https://via.placeholder.com/28" alt="help">
-        <div class="header__post">
-            <button class="header__post__button" method="post" enctype="multipart/form-data">動画投稿
-            <input accept='video/*' type="file" id="file" name="video">
-            </button>
-        </div>
+        <a href="/dashboard/video_edit/">
+            <div class="header__post">
+
+                <div class="header__post__button">
+                    <span><%= image_tag "upload.svg", :size =>'20x17', :class => 'header-upload-icon' %></span>
+                    <span>動画投稿</span>
+                </div>
+            </div>
+
+        </a>
     </div>
 </header>

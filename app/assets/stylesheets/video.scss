@@ -15,7 +15,7 @@
     margin-top: 20px;
 }
 .video__main__sort__select{
-    color: white;
+    @include sort;
 }
 
 
@@ -28,31 +28,21 @@
     display: inline-block;
     overflow: hidden;
 }
+
 .video__main__stock__upload__button{
-    color: white;
-    background-color: inherit;
-    font-size: 16px;
-    height: 92px;
-    width: 592px;
+    @include input-button(92px,592px);
     margin-top: 40px;
     font-weight: bold;
-    #file{
-        font-size: 100px;
-        position: absolute;
-        left: 0;
-        top: 0;
-        opacity: 0;
     }
-}
 
-//2nd tab
+//2nd and 3rd tab
 
 .video__list {
     display: grid;
-    grid-template-columns: 1fr 7fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-gap: 16px;
     height: 130px;
-    margin: 40px 0;
+    margin: 40px 0 40px 10%;
 }
 .video__info {
     display: grid;
@@ -67,38 +57,32 @@
 .video__info__date {
     align-self: end;
 }
+.big-placeholder {
+    height: 780px;
+}
 
 // styling for tabs
-.video__main__tabs {
-    width: 70%;
-    float: left;
-    height: 100%;
-}
 .video__main__tab__item {
-    @include position(relative, $left: 80%, $bottom: 23px);
+    @include position(relative, $left: 70%, $bottom: 23px);
     padding: 10px;
 }
-.video__tab__item:hover {
-opacity: 0.75;
-}
+
 input[name="video__main__tab__item"] {
-display: none;
+    display: none;
 }
 
 .video__main__tab__content {
-display: none;
-text-align: center;
-padding: 40px 0 0 10%;
-width: 120%;
+    display: none;
+    text-align: center;
 }
 
 #video__main__stock:checked ~ #video__main__stock__content,
 #video__main__published:checked ~ #video__main__published__content,
 #video__main__paid:checked ~ #video__main__paid__content {
-display: block;
+    display: block;
 }
 
 .video__main__tabs input:checked + .video__main__tab__item {
-background-color: rgba(250, 251, 255, 0.2);
+    background-color: rgba(250, 251, 255, 0.2);
 }
     

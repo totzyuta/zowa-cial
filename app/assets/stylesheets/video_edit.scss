@@ -1,0 +1,105 @@
+@import 'mixin.scss';
+
+.video-edit{
+    width: 612px;
+    margin: 80px auto;
+}
+.video-edit-top, .video-edit__uploads{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.video-edit__uploads__thumbnail, .video-edit__top__save{
+    justify-self: end;
+}
+.video-edit__top__title {
+    margin-top: 0;
+    font-size: 20px;
+}
+.video-edit__top__save {
+    width: 140px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #f8e71c;
+    font-size: 14px;
+    box-shadow: 0px 4px 0px #d1b900;
+}
+.video-title {
+    margin-top: 47px;
+}
+.video-about__form{
+    @include input-form(303px);
+}
+
+.video-edit__uploads__video__button, .video-edit__uploads__thumbnail__button{
+    @include input-button(190px,284px);
+}
+.video-edit__uploads__video__button__img{
+    @include uploadform-bg;
+}
+.video-edit__uploads__video__button__info{
+    font-size: 14px;
+}
+.video-edit__uploads__video__button__advice{
+    font-size: 12px;
+}
+
+// style for switch
+
+.video-monetize__switch {
+    position: relative;
+    display: inline-block;
+    width: 67px;
+    height: 31px;
+  }
+  
+  .video-monetize__switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .video-monetize__switch__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .video-monetize__switch__slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .video-monetize__switch__slider {
+    background-color: #f8e71c;
+  }
+  
+  input:focus + .video-monetize__switch__slider {
+    box-shadow: 0 0 1px black;
+  }
+  
+  input:checked + .video-monetize__switch__slider:before {
+    -webkit-transform: translateX(36px);
+    -ms-transform: translateX(36px);
+    transform: translateX(36px);
+  }
+  
+  .video-monetize__switch__slider{
+    border-radius: 34px;
+    &:before{
+        border-radius: 50%;
+    }
+  }
+  

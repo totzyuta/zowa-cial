@@ -1,0 +1,77 @@
+<div class="account__edit">
+
+    <p class="account__edit__title">アカウント編集</p>
+    <div class="account__edit__imgs">
+        <div class="account__edit__imgs__user">
+            <p>ユーザー画像</p>
+            <button class="account__edit__imgs__user__button" method="post" enctype="multipart/form-data">縦横120px以上の正方形の画像
+                <input accept='video/*' type="file" id="file" name="user-img">
+            </button>
+        </div>
+        <div class="account__edit__imgs__cover">
+            <p>カバー画像</p>
+            <button class="account__edit__imgs__cover__button" method="post" enctype="multipart/form-data">縦横120px以上の正方形の画像
+                <input accept='video/*' type="file" id="file" name="cover-img">
+            </button>
+        </div>
+        <div class="account__edit__imgs__community">
+            <p>コミュニティ画像</p>
+            <button class="account__edit__imgs__community__button" method="post" enctype="multipart/form-data">縦横120px以上の正方形の画像
+                <input accept='video/*' type="file" id="file" name="community-img">
+            </button>
+        </div>
+    </div>
+
+    <div class="account__user">
+        <p>ユーザー名</p>
+        <input class="oneline-form" type="text" placeholder="ユーザー名を入力してください">
+    </div>
+    <div class="account__tag">
+        <p>属性タグ</p>
+        <input class="oneline-form" type="text" placeholder="属性タグを入力してください">
+    </div>
+
+    <div class="tag-suggest">
+        <div class="tag-suggest__text">
+            <p class="tag-suggest__text__content">参考：ジャンル一覧</p>
+            <p class="tag-suggest__text__content">ささやき　耳かき　ロールプレイ　おしゃべり　タッピング　咀嚼音　料理　耳舐め</p>
+            <p class="tag-suggest__text__content">キネスティックサンド　自然の音　シチュエーションボイス　物質音　雑談　朗読　耳撫で</p>
+            <p class="tag-suggest__text__content">催眠音声　タイピング　スライム　添い寝</p>
+        </div>
+    </div>
+
+
+    <div class="account__about">
+        <p>About</p>
+        <textarea class="account__about__form" type="text" placeholder="あいさつや動画の方針、活動内容など、あなたの紹介文を入力してください。"></textarea>
+    </div>
+    <div class="account__twitter">
+        <p>Twitter</p>
+        <input class="oneline-form" type="text" placeholder="ユーザーIDを入力してください">
+    </div>
+    <div class="account__instagram">
+        <p>Instagram</p>
+        <input class="oneline-form" type="text" placeholder="ユーザーIDを入力してください">
+    </div>
+    <div class="account__youtube">
+        <p>YouTube</p>
+        <input class="oneline-form" type="text" placeholder="URLを入力してください">
+    </div>
+    <div class="account__niconico">
+        <p>ニコニコ動画</p>
+        <input class="oneline-form" type="text" placeholder="URLを入力してください"></div>
+    <div class="account__others">
+        <p>その他</p>
+        <input class="oneline-form" type="text" placeholder="URLを入力してください"></div>
+    <div class="account__private">
+        <p>非公開情報</p>
+        <div class="account__private__mail">
+            <p>メールアドレス</p>
+            <input class="oneline-form" type="mail" placeholder="メールアドレスを入力してください">
+        </div>
+        <div class="account__private__pswd">
+            <p>パスワード</p>
+            <input class="oneline-form" type="password" placeholder="メールアドレスを入力してください">
+        </div>
+    </div>
+</div>
