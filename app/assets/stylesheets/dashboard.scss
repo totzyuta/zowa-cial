@@ -6,12 +6,18 @@ html{
     height: 100%;
 }
 body{
+    margin: 0;
+    font-family: 'Noto Sans Japanese', serif;
+}
+.dashboard{
     height: 100%;
     background-color: #49008a;
     color: white;
     margin: 0;
     display: grid;
     grid-template-columns: 200px auto;
+    background-image: url(bg.svg);
+    background-repeat: no-repeat;
 }
 a {
     color: white;

@@ -1,0 +1,32 @@
+<div class="top">
+    <header class="top-header">
+        <div class="header__left">
+            <%= image_tag "group-5@3x.png", :size =>'131x32', :class => 'header__logo' %>
+        </div>
+    </header>
+    <div class="form-wrapper">
+        <div class="form-wrapper__title">
+            <p class="form-wrapper__title__text">新規アカウント登録</p>
+        </div>
+        <form class="login">
+            <div>メールアドレス
+                <input type="email" name="email" class="top-form" placeholder="    メールアドレスを入力してください"/>
+                <div class="form-error">
+                    <p class="form-error-msg">このメールアドレスはもう使われてるよ。</p>
+                </div>
+            </div>
+            <div>パスワード
+                <input type="password" name="password" class="top-form" placeholder="    パスワードを入力してください" />
+                <div class="form-error">
+                    <p class="form-error-msg">パスワードにはアルファベットと数字両方を入れてね。</p>
+                </div>
+            </div>
+            <div>
+                <input class="top__button" type="submit" value="これで作成"/>
+            </div>
+
+            <a href="/top/login/" class="top__new-customer">ログインはこちら</a>
+        </form>
+
+    </div>
+</div>

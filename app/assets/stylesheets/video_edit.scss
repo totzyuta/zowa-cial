@@ -8,6 +8,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.uploads-icon {
+  position: relative;
+  top: 27px;
+}
 .video-edit__uploads__thumbnail, .video-edit__top__save{
     justify-self: end;
 }
@@ -42,7 +46,24 @@
 .video-edit__uploads__video__button__advice{
     font-size: 12px;
 }
-
+.video-monetize {
+    height: 200px;
+}
+.video-price {
+    margin-top: 46px;
+    display: none;
+    width: 400px;
+}
+.video-price__form{
+    @include input-form(44px);
+    width: 243px;
+}
+.video-price__form__currency{
+    margin-left: 20px;
+}
+#video-monetize__switch:checked ~ #video-monetize__switch__content {
+    display: block;
+}
 // style for switch
 
 .video-monetize__switch {
@@ -52,7 +73,7 @@
     height: 31px;
   }
   
-  .video-monetize__switch input {
+#video-monetize__switch {
     opacity: 0;
     width: 0;
     height: 0;
@@ -103,3 +124,22 @@
     }
   }
   
+//   tips
+.video-tips-title {
+    font-family: HiraginoSans-W9;
+    margin-top: 268px;
+}
+.video-tips-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+    margin-top: 32px;
+    overflow: scroll;
+}
+.video-tips {
+    width: 364px;
+    height: 196px;
+    border: 1px solid white;
+    padding: 10px 28px 0 28px;
+    line-height: 1.75;
+}

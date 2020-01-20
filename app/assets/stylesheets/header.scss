@@ -2,7 +2,6 @@
 
 .header{
     @include vertical-center-for-one-line(60px);
-    display: block;
     box-shadow: 0 8px 24px 0 rgba(0, 7, 10, 0.2);
     width: 100%;
     grid-area: 1/3/1/1;
@@ -11,13 +10,19 @@
 }
 .header__left{
     justify-self: end;
+    align-self: center;
 }
 .header__help {
     position: relative;
     margin: 14px;
 }
+.header__logo{
+    display: block;
+}
 .header__post {
-display: inline-block;
+    display: inline-block;
+    position: relative;
+    top: 14px;
 }
 .header__post__button{
     color: white;
@@ -29,8 +34,48 @@ display: inline-block;
     span{
         height: 32px;
         position: relative;
-        bottom: 11px;
+        bottom: 15px;
         font-size: 12px;
         left: 9px;
     }
+}
+.top-header{
+    @include vertical-center-for-one-line(60px);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 200px auto;
+}
+
+.info{
+    display: inline-block;
+    @include position(relative, $top:8px, $right: 8px);
+}
+.info input{
+    display: none;
+}
+.info-item-content {
+    display: none;
+    width: 242px;
+    height: 132px;
+    border-radius: 4px;
+    box-shadow: 0 4px 32px 0 rgba(73, 0, 138, 0.5);
+    background-color: #f0f5ff;
+    position: absolute;
+    margin: 0;
+    top: 58px;
+    right: 29px;
+    padding: 0;
+    z-index: 99;
+}
+.info-item-content__list {
+    list-style: none;
+    height: 35px;
+    font-size: 14px;
+    margin-left: 16px;
+}
+.info-item-content__link{
+    color: #49008a;
+}
+.info input:checked ~ .info-item-content{
+    display: block;
 }

@@ -1,19 +1,26 @@
 <header class="header">
     <div class="header__left">
-        <img class="header__logo" src="https://via.placeholder.com/28" alt="logo">
+        <%= image_tag "group-5@3x.png", :size =>'131x32', :class => 'header__logo' %>
     </div>
     <div class="header__middle"></div>
     <div class="header__right">
-        <img class="header__help" src="https://via.placeholder.com/28" alt="help">
+        <div class="info">
+            <label for="info-item"><%= image_tag "user-icon@3x.png", :size =>'28x28', :class => 'header__logo' %></label>
+                <input type="checkbox" id="info-item" />
+                <ul class="info-item-content" >
+                <li class="info-item-content__list"><a class="info-item-content__link" href="#">ヘルプ</a></li>
+                <li class="info-item-content__list"><a class="info-item-content__link" href="/top/login/">ログアウト</a></li>
+                <li class="info-item-content__list"><a class="info-item-content__link" href="#">利用規約・プライバシーポリシー</a></li>
+            </ul>
+        </div>
+
         <a href="/dashboard/video_edit/">
             <div class="header__post">
-
                 <div class="header__post__button">
                     <span><%= image_tag "upload.svg", :size =>'20x17', :class => 'header-upload-icon' %></span>
                     <span>動画投稿</span>
                 </div>
             </div>
-
         </a>
     </div>
 </header>

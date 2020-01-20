@@ -1,0 +1,134 @@
+// Place all the styles related to the Top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'mixin.scss';
+
+.top {
+  height: 100%;
+  background-color: #49008a;
+  color: white;
+  margin: 0;
+  background-image: url(bg.svg);
+  background-repeat: no-repeat;
+  min-height: 1024px;
+  display: grid;
+  grid-template-rows: 60px auto;
+}
+.form-wrapper__title {
+  height: 20px;
+  font-family: HiraginoSans-W6;
+  font-size: 20px;
+  letter-spacing: 1.6px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+// login, signup
+.form-wrapper {
+  justify-self: center;
+  align-self: center;
+  width: 415px;
+  height: 542px;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+  bottom: 10%;
+}
+.top-form{
+  @include input-form(44px);
+  width: 335px;
+  margin: 17px 0 24px 0;
+  border: none;
+}
+.login{
+  width: 335px;
+  margin: auto;
+}
+.top__button{
+  font-family: -apple-system, 'BlinkMacSystemFont',  Sans-Serif;
+  width: 234px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #f8e71c;
+  font-size: 14px;
+  box-shadow: 0px 4px 0px #d1b900;
+  margin: 30px auto 0;
+  display: block;
+  color: #29004d;
+  text-align: center;
+  line-height: 40px;
+}
+.top__new-customer{
+  font-size: 14px;
+  width: 234px;
+  height: 44px;
+  border-radius: 4px;
+  border: 1px solid;
+  display: block;
+  text-align: center;
+  line-height: 44px;
+  margin: 20px auto;
+}
+
+// welcome
+.welcome-top {
+  text-align: center;
+  margin-bottom: 57px;
+}
+.welcome-message {
+  margin-top: 16px;
+  font-family: AvenirNext;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 1.6px;
+}
+.top__button__login{
+  width: 234px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #fafbff;
+  font-size: 14px;
+  box-shadow: 0px 4px 0px #b8bdd1;
+  margin: 30px auto 0;
+  display: block;
+  color:  #29004d;
+  text-align: center;
+  line-height: 40px;
+}
+.welcome-wrapper{
+  justify-self: center;
+  align-self: center;
+  width: 415px;
+  height: 542px;
+  position: relative;
+  bottom: 10%;
+}
+.forget-password {
+  text-align: center;
+  display: block;
+  margin-top: 24px;
+  font-size: 12px;
+  text-decoration: underline;
+  font-family: HiraginoSans-W4;
+}
+
+
+// error
+.form-error {
+  width: 335px;
+  height: 32px;
+  background-color: #b00216;
+  font-size: 12px;
+  line-height: 32px;
+  display: none;
+  &.form-error--true{
+    display: block;
+  }
+}
+.form-error-msg{
+  margin: 0;
+  position: relative;
+  left: 20px;
+  margin-top: -28px;
+}
